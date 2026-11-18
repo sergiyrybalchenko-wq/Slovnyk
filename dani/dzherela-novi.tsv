@@ -24,50 +24,50 @@
 58	Google for Developers. Machine Learning Glossary, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
 59	Google for Developers. Machine Learning Glossary: Generative AI, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/generative.
 60	Google for Developers. Machine Learning Glossary: TensorFlow, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/tensorflow.
-61	Gururangan S. et al. Don't Stop Pretraining: Adapt Language Models to Domains and Tasks, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2004.10964.
-62	Hadfield J. et al. How we built our multi-agent research system, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/multi-agent-research-system.
-63	Ho, J., Salimans, T.. Classifier-Free Diffusion Guidance, arXiv:2207.12598, 2022. [online] Available at: https://arxiv.org/abs/2207.12598.
-64	Hoefler, T., Alistarh, D., Ben-Nun, T., Dryden, N., Peste, A.. Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks, arXiv:2102.00554, 2021. [online] Available at: https://arxiv.org/abs/2102.00554.
-65	Holtzman A. et al. The Curious Case of Neural Text Degeneration, arXiv, 2019. [online] Available at: https://arxiv.org/abs/1904.09751.
-66	Huang, Y., Cheng, Y., Bapna, A. et al.. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, arXiv:1811.06965, 2018. [online] Available at: https://arxiv.org/abs/1811.06965.
-67	HUDERIA: New tool to assess the impact of AI systems on human rights, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/portal/-/huderia-new-tool-to-assess-the-impact-of-ai-systems-on-human-rights.
-68	Hugging Face. Continuous batching (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching.
-69	Hugging Face. Continuous batching architecture (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching_architecture.
-70	Hugging Face. Gradient accumulation (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_accumulation.
-71	Hugging Face. Gradient checkpointing (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_checkpointing.
-72	Hugging Face. Quantization (Optimum documentation, Concept guides), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/optimum/concept_guides/quantization.
-73	Hugging Face. Tensor parallelism for inference (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_multi.
-74	International AI Safety Report 2026 (голова — Y. Bengio), 2026. [online] Available at: https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026.
-75	ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system, ISO/IEC, 2023 (картка стандарту в каталозі Standard Norge). [online] Available at: https://online.standard.no/en/isoiec-42001-2023.
-76	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 11 «Information Retrieval and Retrieval-Augmented Generation», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/11.pdf.
-77	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 2 «Words and Tokens», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/2.pdf.
-78	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 5 «Embeddings», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/5.pdf.
-79	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 7 «Transformers and Pretraining», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/7.pdf.
-80	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 8 «Post-training», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/8.pdf.
-81	Kaplan J. et al. Scaling Laws for Neural Language Models, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2001.08361.
-82	Kerbl, B., Kopanas, G., Leimkühler, T., Drettakis, G.. 3D Gaussian Splatting for Real-Time Radiance Field Rendering (ACM Transactions on Graphics, SIGGRAPH 2023), arXiv:2308.04079, 2023. [online] Available at: https://arxiv.org/abs/2308.04079.
-83	Kirillov, A., He, K., Girshick, R., Rother, C., Dollár, P.. Panoptic Segmentation (CVPR 2019), arXiv:1801.00868, 2018. [online] Available at: https://arxiv.org/abs/1801.00868.
-84	Kirillov, A., Mintun, E., Ravi, N. et al.. Segment Anything (ICCV 2023), arXiv:2304.02643, 2023. [online] Available at: https://arxiv.org/abs/2304.02643.
-85	Kirkpatrick J. et al. Overcoming catastrophic forgetting in neural networks, PNAS, 2017. [online] Available at: https://arxiv.org/abs/1612.00796.
-86	Kwon, W., Li, Z., Zhuang, S. et al.. Efficient Memory Management for Large Language Model Serving with PagedAttention (SOSP 2023), arXiv:2309.06180, 2023. [online] Available at: https://arxiv.org/abs/2309.06180.
-87	Lee H. et al. RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2309.00267.
-88	Lester B., Al-Rfou R., Constant N. The Power of Scale for Parameter-Efficient Prompt Tuning, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.08691.
-89	Leviathan Y., Kalman M., Matias Y. Fast Inference from Transformers via Speculative Decoding, arXiv, 2022. [online] Available at: https://arxiv.org/abs/2211.17192.
-90	Lightman H. et al. Let's Verify Step by Step, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.20050.
-91	Lipman, Y., Chen, R. T. Q., Ben-Hamu, H., Nickel, M., Le, M.. Flow Matching for Generative Modeling (ICLR 2023), arXiv:2210.02747, 2022. [online] Available at: https://arxiv.org/abs/2210.02747.
-92	Liu N. F. et al. Lost in the Middle: How Language Models Use Long Contexts, TACL, 2024 (arXiv, 2023). [online] Available at: https://arxiv.org/abs/2307.03172.
-93	LLM01:2025 Prompt Injection, OWASP Gen AI Security Project, 2025. [online] Available at: https://genai.owasp.org/llmrisk/llm01-prompt-injection/.
-94	Machine Learning Glossary, Google for Developers, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
-95	MathWorks. What Is Object Detection?, mathworks.com, 2026. [online] Available at: https://www.mathworks.com/discovery/object-detection.html.
-96	Micikevicius, P., Narang, S., Alben, J. et al.. Mixed Precision Training (ICLR 2018), arXiv:1710.03740, 2017. [online] Available at: https://arxiv.org/abs/1710.03740.
-97	Mildenhall, B., Srinivasan, P. P., Tancik, M. et al.. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis (ECCV 2020), arXiv:2003.08934, 2020. [online] Available at: https://arxiv.org/abs/2003.08934.
-98	NIST AI 100-1. Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST, 2023. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf.
-99	NIST AI 100-2e2025. Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations, NIST (Vassilev A. та ін.), 2025. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf.
-100	NIST AI 100-4. Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf.
-101	NIST AI 600-1. Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf.
-102	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
-103	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
-104	NVIDIA. GPU Performance Background User's Guide (NVIDIA Deep Learning Performance), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html.
+61	Google for Developers. Machine Learning Glossary: TensorFlow, developers.google.com, 2026; Huang Y. et al. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, NeurIPS 2019 (arXiv:1811.06965). [online] Available at: https://developers.google.com/machine-learning/glossary/tensorflow.
+62	Gururangan S. et al. Don't Stop Pretraining: Adapt Language Models to Domains and Tasks, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2004.10964.
+63	Hadfield J. et al. How we built our multi-agent research system, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/multi-agent-research-system.
+64	Ho, J., Salimans, T.. Classifier-Free Diffusion Guidance, arXiv:2207.12598, 2022. [online] Available at: https://arxiv.org/abs/2207.12598.
+65	Hoefler, T., Alistarh, D., Ben-Nun, T., Dryden, N., Peste, A.. Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks, arXiv:2102.00554, 2021. [online] Available at: https://arxiv.org/abs/2102.00554.
+66	Holtzman A. et al. The Curious Case of Neural Text Degeneration, arXiv, 2019. [online] Available at: https://arxiv.org/abs/1904.09751.
+67	Huang, Y., Cheng, Y., Bapna, A. et al.. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, arXiv:1811.06965, 2018. [online] Available at: https://arxiv.org/abs/1811.06965.
+68	HUDERIA: New tool to assess the impact of AI systems on human rights, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/portal/-/huderia-new-tool-to-assess-the-impact-of-ai-systems-on-human-rights.
+69	Hugging Face. Continuous batching (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching.
+70	Hugging Face. Continuous batching architecture (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching_architecture.
+71	Hugging Face. Gradient accumulation (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_accumulation.
+72	Hugging Face. Gradient checkpointing (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_checkpointing.
+73	Hugging Face. Quantization (Optimum documentation, Concept guides), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/optimum/concept_guides/quantization.
+74	Hugging Face. Tensor parallelism for inference (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_multi.
+75	International AI Safety Report 2026 (голова — Y. Bengio), 2026. [online] Available at: https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026.
+76	ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system, ISO/IEC, 2023 (картка стандарту в каталозі Standard Norge). [online] Available at: https://online.standard.no/en/isoiec-42001-2023.
+77	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 11 «Information Retrieval and Retrieval-Augmented Generation», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/11.pdf.
+78	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 2 «Words and Tokens», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/2.pdf.
+79	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 5 «Embeddings», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/5.pdf.
+80	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 7 «Transformers and Pretraining», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/7.pdf.
+81	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 8 «Post-training», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/8.pdf.
+82	Kaplan J. et al. Scaling Laws for Neural Language Models, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2001.08361.
+83	Kerbl, B., Kopanas, G., Leimkühler, T., Drettakis, G.. 3D Gaussian Splatting for Real-Time Radiance Field Rendering (ACM Transactions on Graphics, SIGGRAPH 2023), arXiv:2308.04079, 2023. [online] Available at: https://arxiv.org/abs/2308.04079.
+84	Kirillov, A., He, K., Girshick, R., Rother, C., Dollár, P.. Panoptic Segmentation (CVPR 2019), arXiv:1801.00868, 2018. [online] Available at: https://arxiv.org/abs/1801.00868.
+85	Kirillov, A., Mintun, E., Ravi, N. et al.. Segment Anything (ICCV 2023), arXiv:2304.02643, 2023. [online] Available at: https://arxiv.org/abs/2304.02643.
+86	Kirkpatrick J. et al. Overcoming catastrophic forgetting in neural networks, PNAS, 2017. [online] Available at: https://arxiv.org/abs/1612.00796.
+87	Kwon, W., Li, Z., Zhuang, S. et al.. Efficient Memory Management for Large Language Model Serving with PagedAttention (SOSP 2023), arXiv:2309.06180, 2023. [online] Available at: https://arxiv.org/abs/2309.06180.
+88	Lee H. et al. RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2309.00267.
+89	Lester B., Al-Rfou R., Constant N. The Power of Scale for Parameter-Efficient Prompt Tuning, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.08691.
+90	Leviathan Y., Kalman M., Matias Y. Fast Inference from Transformers via Speculative Decoding, arXiv, 2022. [online] Available at: https://arxiv.org/abs/2211.17192.
+91	Lightman H. et al. Let's Verify Step by Step, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.20050.
+92	Lipman, Y., Chen, R. T. Q., Ben-Hamu, H., Nickel, M., Le, M.. Flow Matching for Generative Modeling (ICLR 2023), arXiv:2210.02747, 2022. [online] Available at: https://arxiv.org/abs/2210.02747.
+93	Liu N. F. et al. Lost in the Middle: How Language Models Use Long Contexts, TACL, 2024 (arXiv, 2023). [online] Available at: https://arxiv.org/abs/2307.03172.
+94	LLM01:2025 Prompt Injection, OWASP Gen AI Security Project, 2025. [online] Available at: https://genai.owasp.org/llmrisk/llm01-prompt-injection/.
+95	Machine Learning Glossary, Google for Developers, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
+96	MathWorks. What Is Object Detection?, mathworks.com, 2026. [online] Available at: https://www.mathworks.com/discovery/object-detection.html.
+97	Micikevicius, P., Narang, S., Alben, J. et al.. Mixed Precision Training (ICLR 2018), arXiv:1710.03740, 2017. [online] Available at: https://arxiv.org/abs/1710.03740.
+98	Mildenhall, B., Srinivasan, P. P., Tancik, M. et al.. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis (ECCV 2020), arXiv:2003.08934, 2020. [online] Available at: https://arxiv.org/abs/2003.08934.
+99	NIST AI 100-1. Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST, 2023. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf.
+100	NIST AI 100-2e2025. Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations, NIST (Vassilev A. та ін.), 2025. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf.
+101	NIST AI 100-4. Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf.
+102	NIST AI 600-1. Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf.
+103	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
+104	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
 105	NVIDIA. Metrics (NVIDIA NIM Benchmarking Documentation), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html.
 106	OpenCV team. Optical Flow (OpenCV 4.x documentation, tutorials), docs.opencv.org, 2026. [online] Available at: https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html.
 107	Park, T. J., Kanda, N., Dimitriadis, D. et al.. A Review of Speaker Diarization: Recent Advances with Deep Learning, arXiv:2101.09624, 2021. [online] Available at: https://arxiv.org/abs/2101.09624.
