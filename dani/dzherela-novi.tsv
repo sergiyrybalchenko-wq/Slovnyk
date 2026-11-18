@@ -5,204 +5,129 @@
 39	Akhtar M., Reuel A., Soni P. et al. When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation, arXiv:2602.16763, 2026. [online] Available at: https://arxiv.org/abs/2602.16763.
 40	Amazon Web Services. Data and model quality monitoring with Amazon SageMaker Model Monitor, Amazon SageMaker AI Developer Guide, 2026. [online] Available at: https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html.
 41	Amazon Web Services. Shadow tests, Amazon SageMaker AI Developer Guide, 2026. [online] Available at: https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html.
-42	Aranda L., Perset K. Name it to tame it: Defining AI incidents and hazards, OECD.AI, 2024. [online] Available at: https://oecd.ai/en/wonk/defining-ai-incidents-and-hazards.
-43	Architecture overview, Model Context Protocol, 2026. [online] Available at: https://modelcontextprotocol.io/docs/learn/architecture.
-44	Arik, S. O., Chen, J., Peng, K., Ping, W., Zhou, Y.. Neural Voice Cloning with a Few Samples (NeurIPS 2018), arXiv:1802.06006, 2018. [online] Available at: https://arxiv.org/abs/1802.06006.
-45	Ba J. L., Kiros J. R., Hinton G. E. Layer Normalization, arXiv:1607.06450, 2016. [online] Available at: https://arxiv.org/abs/1607.06450.
-46	Baydin A. G., Pearlmutter B. A., Radul A. A., Siskind J. M. Automatic differentiation in machine learning: a survey, Journal of Machine Learning Research, vol. 18, 2018, arXiv:1502.05767. [online] Available at: https://arxiv.org/abs/1502.05767.
-47	Brown T. B. et al. Language Models are Few-Shot Learners, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2005.14165.
-48	Cache strategies, Transformers documentation, Hugging Face, 2026. [online] Available at: https://huggingface.co/docs/transformers/kv_cache.
+42	Anthropic (2026). Claude Platform Docs. [online] Available at: https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool.
+43	Aranda L., Perset K. Name it to tame it: Defining AI incidents and hazards, OECD.AI, 2024. [online] Available at: https://oecd.ai/en/wonk/defining-ai-incidents-and-hazards.
+44	Architecture overview, Model Context Protocol, 2026. [online] Available at: https://modelcontextprotocol.io/docs/learn/architecture.
+45	Arik, S. O., Chen, J., Peng, K., Ping, W., Zhou, Y.. Neural Voice Cloning with a Few Samples (NeurIPS 2018), arXiv:1802.06006, 2018. [online] Available at: https://arxiv.org/abs/1802.06006.
+46	Ba J. L., Kiros J. R., Hinton G. E. Layer Normalization, arXiv:1607.06450, 2016. [online] Available at: https://arxiv.org/abs/1607.06450.
+47	Baydin A. G., Pearlmutter B. A., Radul A. A., Siskind J. M. Automatic differentiation in machine learning: a survey, Journal of Machine Learning Research, vol. 18, 2018, arXiv:1502.05767. [online] Available at: https://arxiv.org/abs/1502.05767.
+48	Brown T. B. et al. Language Models are Few-Shot Learners, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2005.14165.
 49	Cao, Z., Simon, T., Wei, S.-E., Sheikh, Y.. Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields (CVPR 2017), arXiv:1611.08050, 2016. [online] Available at: https://arxiv.org/abs/1611.08050.
 50	Chawla N. V., Bowyer K. W., Hall L. O., Kegelmeyer W. P. SMOTE: Synthetic Minority Over-sampling Technique, Journal of Artificial Intelligence Research, vol. 16, 2002. [online] Available at: https://jair.org/index.php/jair/article/view/10302.
 51	Chen, T., Kornblith, S., Norouzi, M., Hinton, G.. A Simple Framework for Contrastive Learning of Visual Representations (ICML 2020), arXiv:2002.05709, 2020. [online] Available at: https://arxiv.org/abs/2002.05709.
 52	Chiang W.-L., Zheng L., Sheng Y. et al. Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference, arXiv:2403.04132, 2024. [online] Available at: https://arxiv.org/abs/2403.04132.
-53	Computer use tool, Claude Platform Docs, Anthropic, 2026. [online] Available at: https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool.
-54	Dao, T., Fu, D. Y., Ermon, S., Rudra, A., Ré, C.. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness, arXiv:2205.14135, 2022. [online] Available at: https://arxiv.org/abs/2205.14135.
-55	Dettmers, T., Pagnoni, A., Holtzman, A., Zettlemoyer, L.. QLoRA: Efficient Finetuning of Quantized LLMs, arXiv:2305.14314, 2023. [online] Available at: https://arxiv.org/abs/2305.14314.
-56	Devlin J. et al. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, arXiv, 2018. [online] Available at: https://arxiv.org/abs/1810.04805.
-57	Dong, C., Loy, C. C., He, K., Tang, X.. Image Super-Resolution Using Deep Convolutional Networks, arXiv:1501.00092, 2014. [online] Available at: https://arxiv.org/abs/1501.00092.
-58	Dosovitskiy, A., Beyer, L., Kolesnikov, A. et al.. An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (ICLR 2021), arXiv:2010.11929, 2020. [online] Available at: https://arxiv.org/abs/2010.11929.
-59	Du Y. et al. Improving Factuality and Reasoning in Language Models through Multiagent Debate, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.14325.
-60	DVC (Iterative). Versioning Data and Models, DVC Documentation, 2026. [online] Available at: https://doc.dvc.org/example-scenarios/versioning-data-and-models.
-61	Eigen, D., Puhrsch, C., Fergus, R.. Depth Map Prediction from a Single Image using a Multi-Scale Deep Network (NeurIPS 2014), arXiv:1406.2283, 2014. [online] Available at: https://arxiv.org/abs/1406.2283.
-62	Erik S., Barry Zhang. Building effective AI agents, Anthropic, 2024. [online] Available at: https://www.anthropic.com/engineering/building-effective-agents.
-63	European Parliament and Council of the EU. Regulation (EU) 2024/1689 (Artificial Intelligence Act), Article 3(67), текст за artificialintelligenceact.eu (Future of Life Institute), 2024. [online] Available at: https://artificialintelligenceact.eu/article/3/.
-64	Fowler M. BlueGreenDeployment, martinfowler.com (bliki), 2010. [online] Available at: https://martinfowler.com/bliki/BlueGreenDeployment.html.
-65	Gebru T., Morgenstern J., Vecchione B. et al. Datasheets for Datasets, arXiv:1803.09010, 2018. [online] Available at: https://arxiv.org/abs/1803.09010.
-66	Generation strategies, Transformers documentation, Hugging Face, 2026. [online] Available at: https://huggingface.co/docs/transformers/generation_strategies.
-67	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 10 «Sequence Modeling: Recurrent and Recursive Nets», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/rnn.html.
-68	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 2 «Linear Algebra», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/linear_algebra.html.
-69	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 4 «Numerical Computation», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/numerical.html.
-70	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 5 «Machine Learning Basics», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/ml.html.
-71	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 6 «Deep Feedforward Networks», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/mlp.html.
-72	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 6, MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/mlp.html.
-73	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 8 «Optimization for Training Deep Models», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/optimization.html.
-74	Goodfellow I., Bengio Y., Courville A. Deep Learning, розд. 9 «Convolutional Networks», MIT Press, 2016. [online] Available at: https://www.deeplearningbook.org/contents/convnets.html.
-75	Google Cloud. About data lineage, Dataplex documentation, 2026. [online] Available at: https://docs.cloud.google.com/dataplex/docs/about-data-lineage.
-76	Google for Developers. Machine Learning Glossary, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
-77	Google for Developers. Machine Learning Glossary, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
-78	Google for Developers. Machine Learning Glossary: Generative AI, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/generative.
-79	Google for Developers. Machine Learning Glossary: Generative AI, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/generative.
-80	Google for Developers. Machine Learning Glossary: Metrics, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/metrics.
-81	Google for Developers. Machine Learning Glossary: ML Fundamentals, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/fundamentals.
-82	Google for Developers. Machine Learning Glossary: ML Fundamentals, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/fundamentals.
-83	Google for Developers. Machine Learning Glossary: TensorFlow, developers.google.com, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary/tensorflow.
-84	Google for Developers. Machine Learning Glossary: TensorFlow, developers.google.com, 2026; Huang Y. et al. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, NeurIPS 2019 (arXiv:1811.06965). [online] Available at: https://developers.google.com/machine-learning/glossary/tensorflow.
-85	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Класифікація: ROC й AUC, 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc?hl=uk.
-86	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Лінійна регресія: втрати, 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/linear-regression/loss?hl=uk.
-87	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Набори даних: незбалансовані набори, 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/overfitting/imbalanced-datasets?hl=uk.
-88	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Набори даних: розділення первинного набору, 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets?hl=uk.
-89	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Порогові значення й матриця помилок (також матриця плутанини або матриця невідповідностей), 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/classification/thresholding?hl=uk.
-90	Google for Developers. Машинне навчання: інтенсивний курс (українська версія). Системи машинного навчання, які працюють у реальних умовах: моніторинг конвеєрів, 2026. [online] Available at: https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring?hl=uk.
-91	Guo C., Pleiss G., Sun Y., Weinberger K. Q. On Calibration of Modern Neural Networks, Proceedings of the 34th ICML, PMLR 70, 2017. [online] Available at: https://proceedings.mlr.press/v70/guo17a.html.
-92	Gururangan S. et al. Don't Stop Pretraining: Adapt Language Models to Domains and Tasks, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2004.10964.
-93	Hadfield J. et al. How we built our multi-agent research system, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/multi-agent-research-system.
-94	He K., Zhang X., Ren S., Sun J. Deep Residual Learning for Image Recognition, CVPR 2016, arXiv:1512.03385, 2015. [online] Available at: https://arxiv.org/abs/1512.03385.
-95	Hendrycks D., Gimpel K. A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks, arXiv:1610.02136, 2016. [online] Available at: https://arxiv.org/abs/1610.02136.
-96	Hendrycks D., Gimpel K. Gaussian Error Linear Units (GELUs), arXiv:1606.08415, 2016. [online] Available at: https://arxiv.org/abs/1606.08415.
-97	Ho, J., Salimans, T.. Classifier-Free Diffusion Guidance, arXiv:2207.12598, 2022. [online] Available at: https://arxiv.org/abs/2207.12598.
-98	Hoefler, T., Alistarh, D., Ben-Nun, T., Dryden, N., Peste, A.. Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks, arXiv:2102.00554, 2021. [online] Available at: https://arxiv.org/abs/2102.00554.
-99	Holtzman A. et al. The Curious Case of Neural Text Degeneration, arXiv, 2019. [online] Available at: https://arxiv.org/abs/1904.09751.
-100	Huang, Y., Cheng, Y., Bapna, A. et al.. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, arXiv:1811.06965, 2018. [online] Available at: https://arxiv.org/abs/1811.06965.
-101	HUDERIA: New tool to assess the impact of AI systems on human rights, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/portal/-/huderia-new-tool-to-assess-the-impact-of-ai-systems-on-human-rights.
-102	Hugging Face. Continuous batching (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching.
-103	Hugging Face. Continuous batching architecture (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/continuous_batching_architecture.
-104	Hugging Face. Gradient accumulation (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_accumulation.
-105	Hugging Face. Gradient checkpointing (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/en/grad_checkpointing.
-106	Hugging Face. Leaderboards and Evaluations: Introduction, Hugging Face Documentation, 2026. [online] Available at: https://huggingface.co/docs/leaderboards/en/leaderboards/intro.
-107	Hugging Face. Quantization (Optimum documentation, Concept guides), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/optimum/concept_guides/quantization.
-108	Hugging Face. Tensor parallelism for inference (Transformers documentation), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/transformers/main/en/perf_infer_gpu_multi.
-109	International AI Safety Report 2026 (голова — Y. Bengio), 2026. [online] Available at: https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026.
-110	ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system, ISO/IEC, 2023 (картка стандарту в каталозі Standard Norge). [online] Available at: https://online.standard.no/en/isoiec-42001-2023.
-111	ISO/IEC. ISO/IEC 22989:2022 Information technology — Artificial intelligence — Artificial intelligence concepts and terminology, п. 3.1.2 (ознайомчий фрагмент BS ISO/IEC 22989:2022), 2022. [online] Available at: https://webstore.ansi.org/preview-pages/BSI/preview_30374629.pdf.
-112	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, додаток A «Hidden Markov Models», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/A.pdf.
-113	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 11 «Information Retrieval and Retrieval-Augmented Generation», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/11.pdf.
-114	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 14 «RNNs and LSTMs», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/14.pdf.
-115	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 19 «Context-Free Grammars and Constituency Parsing», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/19.pdf.
-116	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 2 «Words and Tokens», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/2.pdf.
-117	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 20 «Dependency Parsing», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/20.pdf.
-118	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 24 «Coreference Resolution and Entity Linking», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/24.pdf.
-119	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 3 «N-gram Language Models», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/3.pdf.
-120	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 4 «Logistic Regression and Text Classification», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/4.pdf.
-121	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 5 «Embeddings», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/5.pdf.
-122	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 6 «Neural Networks», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/6.pdf.
-123	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 7 «Transformers and Pretraining», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/7.pdf.
-124	Jurafsky D., Martin J. H. Speech and Language Processing, 3rd ed. draft, розд. 8 «Post-training», Stanford University, 2026. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/8.pdf.
-125	Kaplan J. et al. Scaling Laws for Neural Language Models, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2001.08361.
-126	Kapoor S., Narayanan A. Leakage and the Reproducibility Crisis in ML-based Science, arXiv:2207.07048, 2022. [online] Available at: https://arxiv.org/abs/2207.07048.
-127	Kazmierczak J., Salama K., Huerta V. MLOps: Continuous delivery and automation pipelines in machine learning, Google Cloud Architecture Center, 2024. [online] Available at: https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning.
-128	Kerbl, B., Kopanas, G., Leimkühler, T., Drettakis, G.. 3D Gaussian Splatting for Real-Time Radiance Field Rendering (ACM Transactions on Graphics, SIGGRAPH 2023), arXiv:2308.04079, 2023. [online] Available at: https://arxiv.org/abs/2308.04079.
-129	Kingma D. P., Ba J. Adam: A Method for Stochastic Optimization, ICLR 2015, arXiv:1412.6980, 2014. [online] Available at: https://arxiv.org/abs/1412.6980.
-130	Kirillov, A., He, K., Girshick, R., Rother, C., Dollár, P.. Panoptic Segmentation (CVPR 2019), arXiv:1801.00868, 2018. [online] Available at: https://arxiv.org/abs/1801.00868.
-131	Kirillov, A., Mintun, E., Ravi, N. et al.. Segment Anything (ICCV 2023), arXiv:2304.02643, 2023. [online] Available at: https://arxiv.org/abs/2304.02643.
-132	Kirkpatrick J. et al. Overcoming catastrophic forgetting in neural networks, PNAS, 2017. [online] Available at: https://arxiv.org/abs/1612.00796.
-133	Kwon, W., Li, Z., Zhuang, S. et al.. Efficient Memory Management for Large Language Model Serving with PagedAttention (SOSP 2023), arXiv:2309.06180, 2023. [online] Available at: https://arxiv.org/abs/2309.06180.
-134	Lee H. et al. RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2309.00267.
-135	Lee K., Ippolito D., Nystrom A. et al. Deduplicating Training Data Makes Language Models Better, ACL 2022 (arXiv:2107.06499), 2022. [online] Available at: https://arxiv.org/abs/2107.06499.
-136	Lester B., Al-Rfou R., Constant N. The Power of Scale for Parameter-Efficient Prompt Tuning, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.08691.
-137	Leviathan Y., Kalman M., Matias Y. Fast Inference from Transformers via Speculative Decoding, arXiv, 2022. [online] Available at: https://arxiv.org/abs/2211.17192.
-138	Lexical Computing. Corpus types: monolingual, parallel, multilingual (Sketch Engine), sketchengine.eu, 2026. [online] Available at: https://www.sketchengine.eu/corpora-and-languages/corpus-types/.
-139	Lightman H. et al. Let's Verify Step by Step, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.20050.
-140	Lipman, Y., Chen, R. T. Q., Ben-Hamu, H., Nickel, M., Le, M.. Flow Matching for Generative Modeling (ICLR 2023), arXiv:2210.02747, 2022. [online] Available at: https://arxiv.org/abs/2210.02747.
-141	Liu N. F. et al. Lost in the Middle: How Language Models Use Long Contexts, TACL, 2024 (arXiv, 2023). [online] Available at: https://arxiv.org/abs/2307.03172.
-142	LLM01:2025 Prompt Injection, OWASP Gen AI Security Project, 2025. [online] Available at: https://genai.owasp.org/llmrisk/llm01-prompt-injection/.
-143	Loshchilov I., Hutter F. Decoupled Weight Decay Regularization, ICLR 2019, arXiv:1711.05101, 2017. [online] Available at: https://arxiv.org/abs/1711.05101.
-144	Machine Learning Glossary, Google for Developers, 2026. [online] Available at: https://developers.google.com/machine-learning/glossary.
-145	Manning C. D., Raghavan P., Schütze H. Introduction to Information Retrieval, розд. 2.2.2 «Dropping common terms: stop words», Cambridge University Press, 2008. [online] Available at: https://nlp.stanford.edu/IR-book/html/htmledition/dropping-common-terms-stop-words-1.html.
-146	Manning C. D., Raghavan P., Schütze H. Introduction to Information Retrieval, розд. 2.2.4 «Stemming and lemmatization», Cambridge University Press, 2008. [online] Available at: https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html.
-147	Manning C. D., Raghavan P., Schütze H. Introduction to Information Retrieval, розд. 6.2.2 «Tf-idf weighting», Cambridge University Press, 2008. [online] Available at: https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html.
-148	MathWorks. What Is Object Detection?, mathworks.com, 2026. [online] Available at: https://www.mathworks.com/discovery/object-detection.html.
-149	McInnes L., Healy J., Melville J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction, arXiv:1802.03426, 2018. [online] Available at: https://arxiv.org/abs/1802.03426.
-150	Micikevicius, P., Narang, S., Alben, J. et al.. Mixed Precision Training (ICLR 2018), arXiv:1710.03740, 2017. [online] Available at: https://arxiv.org/abs/1710.03740.
-151	Microsoft. Speech to text FAQ, Azure AI Speech documentation, Microsoft Learn, 2026. [online] Available at: https://learn.microsoft.com/azure/ai-services/speech-service/faq-stt.
-152	Mildenhall, B., Srinivasan, P. P., Tancik, M. et al.. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis (ECCV 2020), arXiv:2003.08934, 2020. [online] Available at: https://arxiv.org/abs/2003.08934.
-153	MLflow. MLflow Model Registry, MLflow documentation, 2026. [online] Available at: https://mlflow.org/docs/latest/ml/model-registry.
-154	MLflow. MLflow Tracking, MLflow documentation, 2026. [online] Available at: https://www.mlflow.org/docs/latest/ml/tracking.
-155	Moreno-Torres J. G., Raeder T., Alaiz-Rodríguez R., Chawla N. V., Herrera F. A unifying view on dataset shift in classification, Pattern Recognition, vol. 45, 2012. [online] Available at: https://www3.nd.edu/~dial/publications/moreno2012unifying.pdf.
-156	Müller R., Kornblith S., Hinton G. When Does Label Smoothing Help?, NeurIPS 2019, arXiv:1906.02629, 2019. [online] Available at: https://arxiv.org/abs/1906.02629.
-157	NIST AI 100-1. Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST, 2023. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf.
-158	NIST AI 100-2e2025. Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations, NIST (Vassilev A. та ін.), 2025. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf.
-159	NIST AI 100-4. Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf.
-160	NIST AI 600-1. Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf.
-161	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
-162	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
-163	NVIDIA. Metrics (NVIDIA NIM Benchmarking Documentation), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html.
-164	OpenCV team. Optical Flow (OpenCV 4.x documentation, tutorials), docs.opencv.org, 2026. [online] Available at: https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html.
-165	Papineni K., Roukos S., Ward T., Zhu W.-J. Bleu: a Method for Automatic Evaluation of Machine Translation, Proceedings of the 40th Annual Meeting of the ACL, 2002. [online] Available at: https://aclanthology.org/P02-1040/.
-166	Park, T. J., Kanda, N., Dimitriadis, D. et al.. A Review of Speaker Diarization: Recent Advances with Deep Learning, arXiv:2101.09624, 2021. [online] Available at: https://arxiv.org/abs/2101.09624.
-167	Peebles, W., Xie, S.. Scalable Diffusion Models with Transformers (ICCV 2023), arXiv:2212.09748, 2022. [online] Available at: https://arxiv.org/abs/2212.09748.
-168	Prompt caching, Claude Platform Docs, Anthropic, 2026. [online] Available at: https://platform.claude.com/docs/en/build-with-claude/prompt-caching.
-169	PyTorch Foundation. torch.optim, PyTorch 2.2 documentation, 2024. [online] Available at: https://docs.pytorch.org/docs/2.2/optim.html.
-170	Radford, A., Kim, J. W., Hallacy, C. et al.. Learning Transferable Visual Models From Natural Language Supervision (ICML 2021), arXiv:2103.00020, 2021. [online] Available at: https://arxiv.org/abs/2103.00020.
-171	Rafailov R. et al. Direct Preference Optimization: Your Language Model is Secretly a Reward Model, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.18290.
-172	Rajasekaran P. et al. Effective context engineering for AI agents, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents.
-173	Rajbhandari, S., Rasley, J., Ruwase, O., He, Y.. ZeRO: Memory Optimizations Toward Training Trillion Parameter Models, arXiv:1910.02054, 2019. [online] Available at: https://arxiv.org/abs/1910.02054.
-174	Ren, J., Rajbhandari, S., Aminabadi, R. Y. et al.. ZeRO-Offload: Democratizing Billion-Scale Model Training, arXiv:2101.06840, 2021. [online] Available at: https://arxiv.org/abs/2101.06840.
-175	Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.. High-Resolution Image Synthesis with Latent Diffusion Models (CVPR 2022), arXiv:2112.10752, 2021. [online] Available at: https://arxiv.org/abs/2112.10752.
-176	Ronneberger, O., Fischer, P., Brox, T.. U-Net: Convolutional Networks for Biomedical Image Segmentation (MICCAI 2015), arXiv:1505.04597, 2015. [online] Available at: https://arxiv.org/abs/1505.04597.
-177	Sato D. CanaryRelease, martinfowler.com (bliki), 2014. [online] Available at: https://martinfowler.com/bliki/CanaryRelease.html.
-178	Schneider, J., Smalley, I. (IBM). What is a Neural Processing Unit (NPU)?, IBM Think, 2024. [online] Available at: https://www.ibm.com/topics/neural-processing-unit.
-179	scikit-learn developers. 3.2. Tuning the hyper-parameters of an estimator, scikit-learn 1.9 documentation, 2026. [online] Available at: https://scikit-learn.org/stable/modules/grid_search.
-180	scikit-learn developers. sklearn.mixture.GaussianMixture, scikit-learn 1.9 documentation, 2026. [online] Available at: https://scikit-learn.org/stable/modules/generated/sklearn.mixture.GaussianMixture.html.
-181	scikit-learn developers. StratifiedKFold, scikit-learn documentation, 2026. [online] Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html.
-182	Sculley D., Holt G., Golovin D. et al. Hidden Technical Debt in Machine Learning Systems, Advances in Neural Information Processing Systems 28 (NIPS 2015), 2015. [online] Available at: https://papers.nips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html.
-183	Settles B. Active Learning Literature Survey, Computer Sciences Technical Report 1648, University of Wisconsin–Madison, 2009. [online] Available at: https://research.cs.wisc.edu/techreports/2009/TR1648.pdf.
-184	Sharma M. et al. Towards Understanding Sycophancy in Language Models, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2310.13548.
-185	Shazeer N. et al. Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer, arXiv, 2017. [online] Available at: https://arxiv.org/abs/1701.06538.
-186	Shen, J., Pang, R., Weiss, R. J. et al.. Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (ICASSP 2018), arXiv:1712.05884, 2017. [online] Available at: https://arxiv.org/abs/1712.05884.
-187	Shinn N. et al. Reflexion: Language Agents with Verbal Reinforcement Learning, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2303.11366.
-188	Snell C. et al. Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2408.03314.
-189	Structured model outputs, OpenAI API documentation, OpenAI, 2026. [online] Available at: https://developers.openai.com/api/docs/guides/structured-outputs.
-190	Su J. et al. RoFormer: Enhanced Transformer with Rotary Position Embedding, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.09864.
-191	Sutskever I., Vinyals O., Le Q. V. Sequence to Sequence Learning with Neural Networks, NeurIPS 2014, arXiv:1409.3215, 2014. [online] Available at: https://arxiv.org/abs/1409.3215.
-192	Suvorov, R., Logacheva, E., Mashikhin, A. et al.. Resolution-robust Large Mask Inpainting with Fourier Convolutions, arXiv:2109.07161, 2021. [online] Available at: https://arxiv.org/abs/2109.07161.
-193	TensorFlow. TensorFlow Data Validation: Checking and analyzing your data, TFX Guide, 2026. [online] Available at: https://tensorflow.google.cn/tfx/guide/tfdv.
-194	The Framework Convention on Artificial Intelligence, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence.
-195	The General-Purpose AI Code of Practice, European Commission, 2025. [online] Available at: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai.
-196	van der Maaten L., Hinton G. Visualizing Data using t-SNE, Journal of Machine Learning Research, vol. 9, 2008. [online] Available at: https://jmlr.org/papers/v9/vandermaaten08a.html.
-197	Vaswani A. et al. Attention Is All You Need, NeurIPS 2017. [online] Available at: https://arxiv.org/abs/1706.03762.
-198	Vaswani, A., Shazeer, N., Parmar, N. et al.. Attention Is All You Need (NeurIPS 2017), arXiv:1706.03762, 2017. [online] Available at: https://arxiv.org/abs/1706.03762.
-199	Vinyals, O., Toshev, A., Bengio, S., Erhan, D.. Show and Tell: A Neural Image Caption Generator (CVPR 2015), arXiv:1411.4555, 2014. [online] Available at: https://arxiv.org/abs/1411.4555.
-200	von Platen P. How to generate text: using different decoding methods for language generation with Transformers, Hugging Face, 2020. [online] Available at: https://huggingface.co/blog/how-to-generate.
-201	Wang X. et al. Self-Consistency Improves Chain of Thought Reasoning in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2203.11171.
-202	Wang, S., Kanwar, P. (Google Cloud). BFloat16: The secret to high performance on Cloud TPUs, Google Cloud Blog, 2019. [online] Available at: https://cloud.google.com/blog/products/ai-machine-learning/bfloat16-the-secret-to-high-performance-on-cloud-tpus?hl=en.
-203	Xu C., Guan S., Greene D., Kechadi M-T. Benchmark Data Contamination of Large Language Models: A Survey, arXiv:2406.04244, 2024. [online] Available at: https://arxiv.org/abs/2406.04244.
-204	Yao S. et al. ReAct: Synergizing Reasoning and Acting in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2210.03629.
-205	Yao S. et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models, NeurIPS 2023. [online] Available at: https://arxiv.org/abs/2305.10601.
-206	Zeghidour, N., Luebs, A., Omran, A., Skoglund, J., Tagliasacchi, M.. SoundStream: An End-to-End Neural Audio Codec, arXiv:2107.03312, 2021. [online] Available at: https://arxiv.org/abs/2107.03312.
-207	Zhang T., Kishore V., Wu F., Weinberger K. Q., Artzi Y. BERTScore: Evaluating Text Generation with BERT, arXiv:1904.09675, 2019. [online] Available at: https://arxiv.org/abs/1904.09675.
-208	Zhang Z. et al. A Survey on the Memory Mechanism of Large Language Model based Agents, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2404.13501.
-209	Zhao, Y., Gu, A., Varma, R. et al.. PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel, arXiv:2304.11277, 2023. [online] Available at: https://arxiv.org/abs/2304.11277.
-210	Zheng L., Chiang W.-L., Sheng Y. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS 2023 Datasets and Benchmarks Track, 2023. [online] Available at: https://arxiv.org/abs/2306.05685.
-211	Zheng L., Sheng Y., Chiang W.-L., Zhang H., Gonzalez J. E., Stoica I. Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings, LMSYS Blog, 2023. [online] Available at: https://lmsys.org/blog/2023-05-03-arena/.
-212	Zhong, Y., Liu, S., Chen, J. et al.. DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving, arXiv:2401.09670, 2024. [online] Available at: https://arxiv.org/abs/2401.09670.
-213	Біла книга з регулювання ШІ в Україні: бачення Мінцифри. Версія для консультацій, Мінцифри, 2024. [online] Available at: https://storage.thedigital.gov.ua/files/d/9d/0bbc3a705c821a197bedfcdfe00899d9.pdf.
-214	За матеріалами: NIST AI 100-2e2025. Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations, NIST (Vassilev A. та ін.), 2025. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-2e2025.pdf.
-215	Регламент (ЄС) 2022/2065 (Digital Services Act), ст. 3(t), Європейський парламент і Рада ЄС, 2022. [online] Available at: https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng.
-216	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-217	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 14. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-218	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 27. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-219	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(11). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-220	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(12). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-221	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(13). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-222	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(20). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-223	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(22). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-224	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(23). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-225	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(24). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-226	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(25). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-227	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(26). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-228	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(3). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-229	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(4). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-230	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(41), ст. 5. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-231	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(47). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-232	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(49). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-233	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(5). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-234	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(57). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-235	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(65). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-236	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(66). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-237	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(8). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-238	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 3(9). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-239	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 5. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-240	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 5(1)(c). [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-241	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 6, додаток III. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
-242	Регламент (ЄС) 2024/1689 (Artificial Intelligence Act), Європейський парламент і Рада ЄС, 2024, ст. 86. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
+53	Dao, T., Fu, D. Y., Ermon, S., Rudra, A., Ré, C.. FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness, arXiv:2205.14135, 2022. [online] Available at: https://arxiv.org/abs/2205.14135.
+54	Dettmers, T., Pagnoni, A., Holtzman, A., Zettlemoyer, L.. QLoRA: Efficient Finetuning of Quantized LLMs, arXiv:2305.14314, 2023. [online] Available at: https://arxiv.org/abs/2305.14314.
+55	Devlin J. et al. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, arXiv, 2018. [online] Available at: https://arxiv.org/abs/1810.04805.
+56	Dong, C., Loy, C. C., He, K., Tang, X.. Image Super-Resolution Using Deep Convolutional Networks, arXiv:1501.00092, 2014. [online] Available at: https://arxiv.org/abs/1501.00092.
+57	Dosovitskiy, A., Beyer, L., Kolesnikov, A. et al.. An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (ICLR 2021), arXiv:2010.11929, 2020. [online] Available at: https://arxiv.org/abs/2010.11929.
+58	Du Y. et al. Improving Factuality and Reasoning in Language Models through Multiagent Debate, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.14325.
+59	DVC (Iterative). Versioning Data and Models, DVC Documentation, 2026. [online] Available at: https://doc.dvc.org/example-scenarios/versioning-data-and-models.
+60	Eigen, D., Puhrsch, C., Fergus, R.. Depth Map Prediction from a Single Image using a Multi-Scale Deep Network (NeurIPS 2014), arXiv:1406.2283, 2014. [online] Available at: https://arxiv.org/abs/1406.2283.
+61	Erik S., Barry Zhang. Building effective AI agents, Anthropic, 2024. [online] Available at: https://www.anthropic.com/engineering/building-effective-agents.
+62	European Parliament and Council of the EU (2024). Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act). Official Journal of the European Union. [online] Available at: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng.
+63	Fowler M. BlueGreenDeployment, martinfowler.com (bliki), 2010. [online] Available at: https://martinfowler.com/bliki/BlueGreenDeployment.html.
+64	Gebru T., Morgenstern J., Vecchione B. et al. Datasheets for Datasets, arXiv:1803.09010, 2018. [online] Available at: https://arxiv.org/abs/1803.09010.
+65	Goodfellow, I., Bengio, Y. and Courville, A. (2016). Deep Learning. MIT Press. [online] Available at: https://www.deeplearningbook.org/.
+66	Google Cloud. About data lineage, Dataplex documentation, 2026. [online] Available at: https://docs.cloud.google.com/dataplex/docs/about-data-lineage.
+67	Google for Developers (2026). Machine Learning Glossary. [online] Available at: https://developers.google.com/machine-learning/glossary.
+68	Google for Developers (2026). Машинне навчання: інтенсивний курс (українська версія). [online] Available at: https://developers.google.com/machine-learning/crash-course?hl=uk.
+69	Guo C., Pleiss G., Sun Y., Weinberger K. Q. On Calibration of Modern Neural Networks, Proceedings of the 34th ICML, PMLR 70, 2017. [online] Available at: https://proceedings.mlr.press/v70/guo17a.html.
+70	Gururangan S. et al. Don't Stop Pretraining: Adapt Language Models to Domains and Tasks, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2004.10964.
+71	Hadfield J. et al. How we built our multi-agent research system, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/multi-agent-research-system.
+72	He K., Zhang X., Ren S., Sun J. Deep Residual Learning for Image Recognition, CVPR 2016, arXiv:1512.03385, 2015. [online] Available at: https://arxiv.org/abs/1512.03385.
+73	Hendrycks D., Gimpel K. A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks, arXiv:1610.02136, 2016. [online] Available at: https://arxiv.org/abs/1610.02136.
+74	Hendrycks D., Gimpel K. Gaussian Error Linear Units (GELUs), arXiv:1606.08415, 2016. [online] Available at: https://arxiv.org/abs/1606.08415.
+75	Ho, J., Salimans, T.. Classifier-Free Diffusion Guidance, arXiv:2207.12598, 2022. [online] Available at: https://arxiv.org/abs/2207.12598.
+76	Hoefler, T., Alistarh, D., Ben-Nun, T., Dryden, N., Peste, A.. Sparsity in Deep Learning: Pruning and growth for efficient inference and training in neural networks, arXiv:2102.00554, 2021. [online] Available at: https://arxiv.org/abs/2102.00554.
+77	Holtzman A. et al. The Curious Case of Neural Text Degeneration, arXiv, 2019. [online] Available at: https://arxiv.org/abs/1904.09751.
+78	Huang, Y., Cheng, Y., Bapna, A. et al.. GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism, arXiv:1811.06965, 2018. [online] Available at: https://arxiv.org/abs/1811.06965.
+79	HUDERIA: New tool to assess the impact of AI systems on human rights, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/portal/-/huderia-new-tool-to-assess-the-impact-of-ai-systems-on-human-rights.
+80	Hugging Face (2026). Transformers documentation. [online] Available at: https://huggingface.co/docs/transformers/generation_strategies.
+81	Hugging Face. Leaderboards and Evaluations: Introduction, Hugging Face Documentation, 2026. [online] Available at: https://huggingface.co/docs/leaderboards/en/leaderboards/intro.
+82	Hugging Face. Quantization (Optimum documentation, Concept guides), huggingface.co, 2026. [online] Available at: https://huggingface.co/docs/optimum/concept_guides/quantization.
+83	International AI Safety Report 2026 (голова — Y. Bengio), 2026. [online] Available at: https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026.
+84	ISO/IEC 42001:2023 Information technology — Artificial intelligence — Management system, ISO/IEC, 2023 (картка стандарту в каталозі Standard Norge). [online] Available at: https://online.standard.no/en/isoiec-42001-2023.
+85	ISO/IEC. ISO/IEC 22989:2022 Information technology — Artificial intelligence — Artificial intelligence concepts and terminology, п. 3.1.2 (ознайомчий фрагмент BS ISO/IEC 22989:2022), 2022. [online] Available at: https://webstore.ansi.org/preview-pages/BSI/preview_30374629.pdf.
+86	Jurafsky, D. and Martin, J. H. (2026). Speech and Language Processing, 3rd ed. draft. Stanford University. [online] Available at: https://web.stanford.edu/~jurafsky/slp3/.
+87	Kaplan J. et al. Scaling Laws for Neural Language Models, arXiv, 2020. [online] Available at: https://arxiv.org/abs/2001.08361.
+88	Kapoor S., Narayanan A. Leakage and the Reproducibility Crisis in ML-based Science, arXiv:2207.07048, 2022. [online] Available at: https://arxiv.org/abs/2207.07048.
+89	Kazmierczak J., Salama K., Huerta V. MLOps: Continuous delivery and automation pipelines in machine learning, Google Cloud Architecture Center, 2024. [online] Available at: https://docs.cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning.
+90	Kerbl, B., Kopanas, G., Leimkühler, T., Drettakis, G.. 3D Gaussian Splatting for Real-Time Radiance Field Rendering (ACM Transactions on Graphics, SIGGRAPH 2023), arXiv:2308.04079, 2023. [online] Available at: https://arxiv.org/abs/2308.04079.
+91	Kingma D. P., Ba J. Adam: A Method for Stochastic Optimization, ICLR 2015, arXiv:1412.6980, 2014. [online] Available at: https://arxiv.org/abs/1412.6980.
+92	Kirillov, A., He, K., Girshick, R., Rother, C., Dollár, P.. Panoptic Segmentation (CVPR 2019), arXiv:1801.00868, 2018. [online] Available at: https://arxiv.org/abs/1801.00868.
+93	Kirillov, A., Mintun, E., Ravi, N. et al.. Segment Anything (ICCV 2023), arXiv:2304.02643, 2023. [online] Available at: https://arxiv.org/abs/2304.02643.
+94	Kirkpatrick J. et al. Overcoming catastrophic forgetting in neural networks, PNAS, 2017. [online] Available at: https://arxiv.org/abs/1612.00796.
+95	Kwon, W., Li, Z., Zhuang, S. et al.. Efficient Memory Management for Large Language Model Serving with PagedAttention (SOSP 2023), arXiv:2309.06180, 2023. [online] Available at: https://arxiv.org/abs/2309.06180.
+96	Lee H. et al. RLAIF vs. RLHF: Scaling Reinforcement Learning from Human Feedback with AI Feedback, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2309.00267.
+97	Lee K., Ippolito D., Nystrom A. et al. Deduplicating Training Data Makes Language Models Better, ACL 2022 (arXiv:2107.06499), 2022. [online] Available at: https://arxiv.org/abs/2107.06499.
+98	Lester B., Al-Rfou R., Constant N. The Power of Scale for Parameter-Efficient Prompt Tuning, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.08691.
+99	Leviathan Y., Kalman M., Matias Y. Fast Inference from Transformers via Speculative Decoding, arXiv, 2022. [online] Available at: https://arxiv.org/abs/2211.17192.
+100	Lexical Computing. Corpus types: monolingual, parallel, multilingual (Sketch Engine), sketchengine.eu, 2026. [online] Available at: https://www.sketchengine.eu/corpora-and-languages/corpus-types/.
+101	Lightman H. et al. Let's Verify Step by Step, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.20050.
+102	Lipman, Y., Chen, R. T. Q., Ben-Hamu, H., Nickel, M., Le, M.. Flow Matching for Generative Modeling (ICLR 2023), arXiv:2210.02747, 2022. [online] Available at: https://arxiv.org/abs/2210.02747.
+103	Liu N. F. et al. Lost in the Middle: How Language Models Use Long Contexts, TACL, 2024 (arXiv, 2023). [online] Available at: https://arxiv.org/abs/2307.03172.
+104	LLM01:2025 Prompt Injection, OWASP Gen AI Security Project, 2025. [online] Available at: https://genai.owasp.org/llmrisk/llm01-prompt-injection/.
+105	Loshchilov I., Hutter F. Decoupled Weight Decay Regularization, ICLR 2019, arXiv:1711.05101, 2017. [online] Available at: https://arxiv.org/abs/1711.05101.
+106	Manning, C. D., Raghavan, P. and Schütze, H. (2008). Introduction to Information Retrieval. Cambridge University Press. [online] Available at: https://nlp.stanford.edu/IR-book/.
+107	MathWorks. What Is Object Detection?, mathworks.com, 2026. [online] Available at: https://www.mathworks.com/discovery/object-detection.html.
+108	McInnes L., Healy J., Melville J. UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction, arXiv:1802.03426, 2018. [online] Available at: https://arxiv.org/abs/1802.03426.
+109	Micikevicius, P., Narang, S., Alben, J. et al.. Mixed Precision Training (ICLR 2018), arXiv:1710.03740, 2017. [online] Available at: https://arxiv.org/abs/1710.03740.
+110	Microsoft. Speech to text FAQ, Azure AI Speech documentation, Microsoft Learn, 2026. [online] Available at: https://learn.microsoft.com/azure/ai-services/speech-service/faq-stt.
+111	Mildenhall, B., Srinivasan, P. P., Tancik, M. et al.. NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis (ECCV 2020), arXiv:2003.08934, 2020. [online] Available at: https://arxiv.org/abs/2003.08934.
+112	MLflow (2026). MLflow documentation. [online] Available at: https://mlflow.org/docs/latest/ml/model-registry.
+113	Moreno-Torres J. G., Raeder T., Alaiz-Rodríguez R., Chawla N. V., Herrera F. A unifying view on dataset shift in classification, Pattern Recognition, vol. 45, 2012. [online] Available at: https://www3.nd.edu/~dial/publications/moreno2012unifying.pdf.
+114	Müller R., Kornblith S., Hinton G. When Does Label Smoothing Help?, NeurIPS 2019, arXiv:1906.02629, 2019. [online] Available at: https://arxiv.org/abs/1906.02629.
+115	NIST AI 100-1. Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST, 2023. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf.
+116	NIST AI 100-4. Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf.
+117	NIST AI 600-1. Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf.
+118	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
+119	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
+120	NVIDIA. Metrics (NVIDIA NIM Benchmarking Documentation), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html.
+121	OpenCV team. Optical Flow (OpenCV 4.x documentation, tutorials), docs.opencv.org, 2026. [online] Available at: https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html.
+122	Papineni K., Roukos S., Ward T., Zhu W.-J. Bleu: a Method for Automatic Evaluation of Machine Translation, Proceedings of the 40th Annual Meeting of the ACL, 2002. [online] Available at: https://aclanthology.org/P02-1040/.
+123	Park, T. J., Kanda, N., Dimitriadis, D. et al.. A Review of Speaker Diarization: Recent Advances with Deep Learning, arXiv:2101.09624, 2021. [online] Available at: https://arxiv.org/abs/2101.09624.
+124	Peebles, W., Xie, S.. Scalable Diffusion Models with Transformers (ICCV 2023), arXiv:2212.09748, 2022. [online] Available at: https://arxiv.org/abs/2212.09748.
+125	PyTorch Foundation. torch.optim, PyTorch 2.2 documentation, 2024. [online] Available at: https://docs.pytorch.org/docs/2.2/optim.html.
+126	Radford, A., Kim, J. W., Hallacy, C. et al.. Learning Transferable Visual Models From Natural Language Supervision (ICML 2021), arXiv:2103.00020, 2021. [online] Available at: https://arxiv.org/abs/2103.00020.
+127	Rafailov R. et al. Direct Preference Optimization: Your Language Model is Secretly a Reward Model, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.18290.
+128	Rajasekaran P. et al. Effective context engineering for AI agents, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents.
+129	Rajbhandari, S., Rasley, J., Ruwase, O., He, Y.. ZeRO: Memory Optimizations Toward Training Trillion Parameter Models, arXiv:1910.02054, 2019. [online] Available at: https://arxiv.org/abs/1910.02054.
+130	Ren, J., Rajbhandari, S., Aminabadi, R. Y. et al.. ZeRO-Offload: Democratizing Billion-Scale Model Training, arXiv:2101.06840, 2021. [online] Available at: https://arxiv.org/abs/2101.06840.
+131	Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.. High-Resolution Image Synthesis with Latent Diffusion Models (CVPR 2022), arXiv:2112.10752, 2021. [online] Available at: https://arxiv.org/abs/2112.10752.
+132	Ronneberger, O., Fischer, P., Brox, T.. U-Net: Convolutional Networks for Biomedical Image Segmentation (MICCAI 2015), arXiv:1505.04597, 2015. [online] Available at: https://arxiv.org/abs/1505.04597.
+133	Sato D. CanaryRelease, martinfowler.com (bliki), 2014. [online] Available at: https://martinfowler.com/bliki/CanaryRelease.html.
+134	Schneider, J., Smalley, I. (IBM). What is a Neural Processing Unit (NPU)?, IBM Think, 2024. [online] Available at: https://www.ibm.com/topics/neural-processing-unit.
+135	scikit-learn developers (2026). scikit-learn documentation. [online] Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html.
+136	Sculley D., Holt G., Golovin D. et al. Hidden Technical Debt in Machine Learning Systems, Advances in Neural Information Processing Systems 28 (NIPS 2015), 2015. [online] Available at: https://papers.nips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html.
+137	Settles B. Active Learning Literature Survey, Computer Sciences Technical Report 1648, University of Wisconsin–Madison, 2009. [online] Available at: https://research.cs.wisc.edu/techreports/2009/TR1648.pdf.
+138	Sharma M. et al. Towards Understanding Sycophancy in Language Models, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2310.13548.
+139	Shazeer N. et al. Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer, arXiv, 2017. [online] Available at: https://arxiv.org/abs/1701.06538.
+140	Shen, J., Pang, R., Weiss, R. J. et al.. Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (ICASSP 2018), arXiv:1712.05884, 2017. [online] Available at: https://arxiv.org/abs/1712.05884.
+141	Shinn N. et al. Reflexion: Language Agents with Verbal Reinforcement Learning, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2303.11366.
+142	Snell C. et al. Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2408.03314.
+143	Structured model outputs, OpenAI API documentation, OpenAI, 2026. [online] Available at: https://developers.openai.com/api/docs/guides/structured-outputs.
+144	Su J. et al. RoFormer: Enhanced Transformer with Rotary Position Embedding, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.09864.
+145	Sutskever I., Vinyals O., Le Q. V. Sequence to Sequence Learning with Neural Networks, NeurIPS 2014, arXiv:1409.3215, 2014. [online] Available at: https://arxiv.org/abs/1409.3215.
+146	Suvorov, R., Logacheva, E., Mashikhin, A. et al.. Resolution-robust Large Mask Inpainting with Fourier Convolutions, arXiv:2109.07161, 2021. [online] Available at: https://arxiv.org/abs/2109.07161.
+147	TensorFlow. TensorFlow Data Validation: Checking and analyzing your data, TFX Guide, 2026. [online] Available at: https://tensorflow.google.cn/tfx/guide/tfdv.
+148	The Framework Convention on Artificial Intelligence, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence.
+149	The General-Purpose AI Code of Practice, European Commission, 2025. [online] Available at: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai.
+150	van der Maaten L., Hinton G. Visualizing Data using t-SNE, Journal of Machine Learning Research, vol. 9, 2008. [online] Available at: https://jmlr.org/papers/v9/vandermaaten08a.html.
+151	Vaswani, A. et al. (2017). Attention Is All You Need. NeurIPS 2017. arXiv:1706.03762. [online] Available at: https://arxiv.org/abs/1706.03762.
+152	Vinyals, O., Toshev, A., Bengio, S., Erhan, D.. Show and Tell: A Neural Image Caption Generator (CVPR 2015), arXiv:1411.4555, 2014. [online] Available at: https://arxiv.org/abs/1411.4555.
+153	von Platen P. How to generate text: using different decoding methods for language generation with Transformers, Hugging Face, 2020. [online] Available at: https://huggingface.co/blog/how-to-generate.
+154	Wang X. et al. Self-Consistency Improves Chain of Thought Reasoning in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2203.11171.
+155	Wang, S., Kanwar, P. (Google Cloud). BFloat16: The secret to high performance on Cloud TPUs, Google Cloud Blog, 2019. [online] Available at: https://cloud.google.com/blog/products/ai-machine-learning/bfloat16-the-secret-to-high-performance-on-cloud-tpus?hl=en.
+156	Xu C., Guan S., Greene D., Kechadi M-T. Benchmark Data Contamination of Large Language Models: A Survey, arXiv:2406.04244, 2024. [online] Available at: https://arxiv.org/abs/2406.04244.
+157	Yao S. et al. ReAct: Synergizing Reasoning and Acting in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2210.03629.
+158	Yao S. et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models, NeurIPS 2023. [online] Available at: https://arxiv.org/abs/2305.10601.
+159	Zeghidour, N., Luebs, A., Omran, A., Skoglund, J., Tagliasacchi, M.. SoundStream: An End-to-End Neural Audio Codec, arXiv:2107.03312, 2021. [online] Available at: https://arxiv.org/abs/2107.03312.
+160	Zhang T., Kishore V., Wu F., Weinberger K. Q., Artzi Y. BERTScore: Evaluating Text Generation with BERT, arXiv:1904.09675, 2019. [online] Available at: https://arxiv.org/abs/1904.09675.
+161	Zhang Z. et al. A Survey on the Memory Mechanism of Large Language Model based Agents, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2404.13501.
+162	Zhao, Y., Gu, A., Varma, R. et al.. PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel, arXiv:2304.11277, 2023. [online] Available at: https://arxiv.org/abs/2304.11277.
+163	Zheng L., Chiang W.-L., Sheng Y. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS 2023 Datasets and Benchmarks Track, 2023. [online] Available at: https://arxiv.org/abs/2306.05685.
+164	Zheng L., Sheng Y., Chiang W.-L., Zhang H., Gonzalez J. E., Stoica I. Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings, LMSYS Blog, 2023. [online] Available at: https://lmsys.org/blog/2023-05-03-arena/.
+165	Zhong, Y., Liu, S., Chen, J. et al.. DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving, arXiv:2401.09670, 2024. [online] Available at: https://arxiv.org/abs/2401.09670.
+166	Біла книга з регулювання ШІ в Україні: бачення Мінцифри. Версія для консультацій, Мінцифри, 2024. [online] Available at: https://storage.thedigital.gov.ua/files/d/9d/0bbc3a705c821a197bedfcdfe00899d9.pdf.
+167	Регламент (ЄС) 2022/2065 (Digital Services Act), ст. 3(t), Європейський парламент і Рада ЄС, 2022. [online] Available at: https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng.
