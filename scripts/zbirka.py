@@ -50,14 +50,16 @@ def read_tsv(path):
 
 def set_runs(p, uk, en, definition, template_runs):
     """Переписує абзац статті: жирний термін – жирний англійський відповідник – визначення."""
+    base = template_runs[0] if template_runs else None
+    base_rpr = copy.deepcopy(base._element.rPr) if base is not None and base._element.rPr is not None else None
     for r in list(p.runs):
         r._element.getparent().remove(r._element)
-    base = template_runs[0] if template_runs else None
     def add(text, bold):
         run = p.add_run(text)
+        if base_rpr is not None:  # шрифт, розмір, мова — як у шаблонній статті
+            run._element.insert(0, copy.deepcopy(base_rpr))
         run.bold = bold
-        if base is not None and base.font.size:
-            run.font.size = base.font.size
+        run.font.name = run.font.name or 'Times New Roman'
         return run
     add(uk, True)
     if en:
@@ -243,6 +245,16 @@ def main():
         p.runs[0].text = f"{s['номер']}.{s['текст']}"
         for r in p.runs[1:]:
             r._element.getparent().remove(r._element)
+
+    # 6. Єдиний шрифт статей: чернеткові вставки (Helvetica, Calibri тощо) -> Times New Roman.
+    paras = doc.paragraphs
+    for p in paras[start + 1:]:
+        for r in p.runs:
+            if r.font.name is None or ';' in r.font.name or r.font.name != 'Times New Roman':
+                r.font.name = 'Times New Roman'
+                rf = r._element.rPr.rFonts
+                rf.set(docx.oxml.ns.qn('w:cs'), 'Times New Roman')
+                rf.set(docx.oxml.ns.qn('w:eastAsia'), 'Times New Roman')
 
     doc.save('build/slovnyk-nova-redaktsiia.docx')
     zvit(changes)
