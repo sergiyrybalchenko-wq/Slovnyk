@@ -9,7 +9,7 @@ for r in rows:
     s = r['джерело'].strip()
     if s.startswith('Н08'):
         s = 'Міністерство цифрової трансформації України (2026). Словник термінів у сфері штучного інтелекту 2.0'
-    if s and s not in seen:
+    if s and s not in seen and not s.startswith('Д'):
         seen[s] = r['url'].strip()
 with open('dani/dzherela-novi.tsv', 'w', encoding='utf-8', newline='') as f:
     w = csv.writer(f, delimiter='\t', lineterminator='\n')
