@@ -12,6 +12,9 @@ SRC = 'original/slovnyk-vykhidnyi.docx'
 DASH = r'\s*[-–—]\s*'
 START = re.compile(r'^(?P<uk>[^A-Za-z]{1,140}?)' + DASH + r'(?P<en>[A-Za-z].*?)(?:' + DASH + r'|\s{2,}|$)')
 
+LOOSE = re.compile(r'^.{2,140}?\s[-–—]\s')
+
+
 def first_bold(p):
     for r in p.runs:
         if r.text.strip():
@@ -50,8 +53,8 @@ def extract(doc):
             continue
         if re.fullmatch(r'[А-ЯІЇЄҐA-Z]', t):
             letter = t; continue
-        is_start = (sec == 'abr') or first_bold(p) or START.match(t)
-        if sec == 'osn' and not first_bold(p) and entries and not START.match(t):
+        is_start = (sec == 'abr') or first_bold(p) or START.match(t) or LOOSE.match(t)
+        if sec == 'osn' and not first_bold(p) and entries and not START.match(t) and not LOOSE.match(t):
             is_start = False
         if is_start or not entries:
             entries.append(dict(sec=sec, letter=letter, els=[i], text=t))

@@ -85,6 +85,7 @@ def main():
     dec = {r['id']: r for r in read_tsv('dani/rishennia.tsv')}
     new = read_tsv('dani/novi.tsv')
     changes = {'вилучено': [], 'відредаговано': [], 'додано': []}
+    extra_terms = []
 
     # Шаблонний абзац для нових статей — перша стаття основної частини.
     first = entries[order[0]]
@@ -113,29 +114,24 @@ def main():
             p0 = Paragraph(els[0], doc)
             uk, en, df = split_entry(paras[0])
             set_runs(p0, uk, en, df, p0.runs)
-            # решта абзаців статті: замінити по черзі, зайві вилучити, нові додати
-            for k, el in enumerate(els[1:], 1):
-                if k < len(paras):
-                    pk = Paragraph(el, doc)
-                    for r in list(pk.runs)[1:]:
-                        r._element.getparent().remove(r._element)
-                    if pk.runs:
-                        pk.runs[0].text = paras[k]; pk.runs[0].bold = False
-                    else:
-                        pk.add_run(paras[k])
-                else:
-                    el.getparent().remove(el)
-            last = els[min(len(els), len(paras)) - 1]
-            for k in range(len(els), len(paras)):
-                ne = copy.deepcopy(last)
-                last.addnext(ne)
+            # Решта абзаців статті замінюються новими. Абзац, що починається з «§», —
+            # окрема стаття (для розділення злитих статей), інакше — продовження.
+            for el in els[1:]:
+                el.getparent().remove(el)
+            last = els[0]
+            for para in paras[1:]:
+                ne = copy.deepcopy(els[0]); last.addnext(ne); last = ne
                 pn = Paragraph(ne, doc)
-                for r in list(pn.runs)[1:]:
-                    r._element.getparent().remove(r._element)
-                pn.runs[0].text = paras[k]; pn.runs[0].bold = False
-                last = ne
+                if para.startswith('§'):
+                    u2, e2, d2 = split_entry(para[1:])
+                    set_runs(pn, u2, e2, d2, pn.runs)
+                    extra_terms.append(u2.strip())
+                else:
+                    for r in list(pn.runs):
+                        r._element.getparent().remove(r._element)
+                    pn.add_run(para)
             e['uk'] = uk
-            changes['відредаговано'].append((uk, e['text'], new_text.replace('\\n', '\n'), d['причина']))
+            changes['відредаговано'].append((uk, e['text'], new_text.replace('\\n', '\n').replace('§', ''), d['причина']))
 
     # 2. Нові статті: вставити за абеткою в межах основної частини.
     alive = [entries[s] for s in order if entries[s]['sec'] == 'osn' and not entries[s].get('deleted')]
@@ -183,7 +179,7 @@ def main():
     anchor = paras[idx_start]._element
     for p in old:
         p._element.getparent().remove(p._element)
-    terms = sorted({re.sub(r'\s+', ' ', e['uk']).strip() for e in alive}, key=sort_key)
+    terms = sorted({re.sub(r'\s+', ' ', e['uk']).strip() for e in alive} | set(extra_terms), key=sort_key)
     cur = None
     for t in terms:
         L = t[:1].upper()
