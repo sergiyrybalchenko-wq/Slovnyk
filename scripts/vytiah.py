@@ -63,7 +63,7 @@ def extract(doc):
     for n, e in enumerate(entries, 1):
         e['id'] = f'S{n:04d}'
         m = START.match(e['text'].split('\n')[0])
-        e['uk'] = m.group('uk').strip() if m else e['text'].split(' - ')[0][:80].strip()
+        e['uk'] = m.group('uk').strip() if m else re.split(r'\s+[-–—]\s*', e['text'].split('\n')[0])[0][:80].strip()
         e['en'] = m.group('en').strip() if m else ''
     return entries
 

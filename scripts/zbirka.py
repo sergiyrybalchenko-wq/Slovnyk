@@ -91,6 +91,17 @@ def main():
     first = entries[order[0]]
     tmpl_el = body[first['els'][0]]
 
+    # Кожна стаття тримає посилання на свої елементи (а не індекси).
+    for e in entries.values():
+        e['refs'] = [body[i] for i in e['els']]
+    moved = []
+
+    def make_entry_par(uk, en, df):
+        ne = copy.deepcopy(tmpl_el)
+        p = Paragraph(ne, doc)
+        set_runs(p, uk, en, df, p.runs)
+        return ne
+
     # 1. Правки і вилучення.
     for sid in order:
         e = entries[sid]
@@ -99,62 +110,87 @@ def main():
             continue
         act = d['дія'].strip()
         if act == 'вилучити':
-            for i in e['els']:
-                el = body[i]
+            for el in e['refs']:
                 if el.getparent() is not None:
                     el.getparent().remove(el)
             changes['вилучено'].append((e['uk'], e['text'], d['причина']))
             e['deleted'] = True
-        elif act == 'виправити':
+        elif act in ('виправити', 'формат'):  # «формат» — лише впорядкування, у звіт не йде
             new_text = d['новий_текст'].strip()
-            paras = [x for x in new_text.split('\\n') if x.strip()]
-            els = [body[i] for i in e['els'] if body[i].tag.endswith('}p')]
-            if not els:
-                continue
-            p0 = Paragraph(els[0], doc)
+            paras = [x.strip() for x in new_text.split('\\n') if x.strip()]
             uk, en, df = split_entry(paras[0])
-            set_runs(p0, uk, en, df, p0.runs)
-            # Решта абзаців статті замінюються новими. Абзац, що починається з «§», —
-            # окрема стаття (для розділення злитих статей), інакше — продовження.
-            for el in els[1:]:
-                el.getparent().remove(el)
-            last = els[0]
+            first_el = e['refs'][0]
+            if first_el.tag.endswith('}p'):
+                p0 = Paragraph(first_el, doc)
+                set_runs(p0, uk, en, df, p0.runs)
+            else:  # стаття в таблиці — замінюємо таблицю абзацом
+                ne = make_entry_par(uk, en, df)
+                first_el.addprevious(ne)
+                first_el.getparent().remove(first_el)
+                first_el = ne
+            for el in e['refs'][1:]:
+                if el.getparent() is not None:
+                    el.getparent().remove(el)
+            refs = [first_el]
+            # Абзац, що починається з «§», — окрема стаття (розділення злитих статей).
             for para in paras[1:]:
-                ne = copy.deepcopy(els[0]); last.addnext(ne); last = ne
-                pn = Paragraph(ne, doc)
                 if para.startswith('§'):
                     u2, e2, d2 = split_entry(para[1:])
-                    set_runs(pn, u2, e2, d2, pn.runs)
+                    ne = make_entry_par(u2.strip(), e2.strip(), d2.strip())
                     extra_terms.append(u2.strip())
                 else:
+                    ne = copy.deepcopy(first_el)
+                    pn = Paragraph(ne, doc)
                     for r in list(pn.runs):
                         r._element.getparent().remove(r._element)
                     pn.add_run(para)
+                refs[-1].addnext(ne)
+                refs.append(ne)
+            e['refs'] = refs
+            old_letter = (e['uk'].strip()[:1] or ' ').upper()
             e['uk'] = uk
-            changes['відредаговано'].append((uk, e['text'], new_text.replace('\\n', '\n').replace('§', ''), d['причина']))
+            if e['sec'] == 'osn' and uk.strip()[:1].upper() != old_letter:
+                moved.append(e)
+            if act == 'виправити':
+                changes['відредаговано'].append((uk, e['text'], new_text.replace('\\n', '\n').replace('§', ''), d['причина']))
 
-    # 2. Нові статті: вставити за абеткою в межах основної частини.
-    alive = [entries[s] for s in order if entries[s]['sec'] == 'osn' and not entries[s].get('deleted')]
+    # 2. Нові статті і перейменовані на іншу літеру — за абеткою в межах своєї літери.
+    alive = [entries[s] for s in order if entries[s]['sec'] == 'osn' and not entries[s].get('deleted') and entries[s] not in moved]
+
+    def place(item):
+        k = sort_key(item['uk'])
+        L = item['uk'].strip()[:1].upper()
+        same = [x for x in alive if x['uk'].strip()[:1].upper() == L]
+        if same:
+            after = None
+            for x in same:
+                if sort_key(x['uk']) <= k:
+                    after = x
+            if after is None:
+                for el in item['refs']:
+                    same[0]['refs'][0].addprevious(el)
+                alive.insert(alive.index(same[0]), item)
+            else:
+                anchor = after['refs'][-1]
+                for el in item['refs']:
+                    anchor.addnext(el); anchor = el
+                alive.insert(alive.index(after) + 1, item)
+        else:  # немає статей цієї літери — після останньої статті меншої літери
+            prev = [x for x in alive if sort_key(x['uk']) <= k]
+            anchor = (prev[-1] if prev else alive[0])['refs'][-1]
+            for el in item['refs']:
+                anchor.addnext(el); anchor = el
+            alive.insert(alive.index(prev[-1]) + 1 if prev else 0, item)
+
+    for e in moved:
+        for el in e['refs']:
+            el.getparent().remove(el)
+        place(e)
     for n in sorted(new, key=lambda r: sort_key(r['термін_uk'])):
-        k = sort_key(n['термін_uk'])
-        after = None
-        for e in alive:
-            if sort_key(e['uk']) <= k:
-                after = e
-            elif after is not None:
-                break
-        anchor = body[(after or alive[0])['els'][-1]]
-        ne = copy.deepcopy(tmpl_el)
-        if after is None:
-            anchor.addprevious(ne)
-        else:
-            anchor.addnext(ne)
-        p = Paragraph(ne, doc)
-        set_runs(p, n['термін_uk'].strip(), n['term_en'].strip(), n['визначення'].strip(), p.runs)
-        fake = dict(uk=n['термін_uk'].strip(), els=[], sec='osn')
-        body.append(ne); fake['els'] = [len(body) - 1]
-        alive.insert(alive.index(after) + 1 if after else 0, fake)
-        changes['додано'].append((n['термін_uk'].strip(), f"{n['термін_uk']} – {n['term_en']} – {n['визначення']}", n['причина']))
+        uk = n['термін_uk'].strip()
+        item = dict(uk=uk, sec='osn', refs=[make_entry_par(uk, n['term_en'].strip(), n['визначення'].strip())])
+        place(item)
+        changes['додано'].append((uk, f"{uk} – {n['term_en'].strip()} – {n['визначення'].strip()}", n['причина']))
 
     # 3. Чернеткові порожнечі: між статтями основної частини і розділу абревіатур — без порожніх абзаців.
     paras = doc.paragraphs
