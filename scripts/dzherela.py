@@ -18,10 +18,10 @@ CANON = [  # (шаблон, текст запису, URL)
     (r'^Goodfellow I\., Bengio', 'Goodfellow, I., Bengio, Y. and Courville, A. (2016). Deep Learning. MIT Press', 'https://www.deeplearningbook.org/'),
     (r'^Jurafsky D\., Martin', 'Jurafsky, D. and Martin, J. H. (2026). Speech and Language Processing, 3rd ed. draft. Stanford University', 'https://web.stanford.edu/~jurafsky/slp3/'),
     (r'^Manning C\. D\., Raghavan', 'Manning, C. D., Raghavan, P. and Schütze, H. (2008). Introduction to Information Retrieval. Cambridge University Press', 'https://nlp.stanford.edu/IR-book/'),
-    (r'Transformers documentation|Gradient accumulation|Gradient checkpointing|Continuous batching|Tensor parallelism for inference', 'Hugging Face (2026). Transformers documentation', ''),
-    (r'Claude Platform Docs', 'Anthropic (2026). Claude Platform Docs', ''),
-    (r'^MLflow\.', 'MLflow (2026). MLflow documentation', ''),
-    (r'^scikit-learn developers', 'scikit-learn developers (2026). scikit-learn documentation', ''),
+    (r'Transformers documentation|Gradient accumulation|Gradient checkpointing|Continuous batching|Tensor parallelism for inference', 'Hugging Face (2026). Transformers documentation', 'https://huggingface.co/docs/transformers/index'),
+    (r'Claude Platform Docs', 'Anthropic (2026). Claude Platform Docs', 'https://platform.claude.com/docs/en/home'),
+    (r'^MLflow\.', 'MLflow (2026). MLflow documentation', 'https://mlflow.org/docs/latest/'),
+    (r'^scikit-learn developers', 'scikit-learn developers (2026). scikit-learn documentation', 'https://scikit-learn.org/stable/'),
     (r'Attention Is All You Need', 'Vaswani, A. et al. (2017). Attention Is All You Need. NeurIPS 2017. arXiv:1706.03762', 'https://arxiv.org/abs/1706.03762'),
 ]
 
@@ -51,6 +51,8 @@ def canon(src, url):
     for pat, text, u in CANON:
         if re.search(pat, s):
             return (text, (u or url.strip())) if text else (None, None)
+    s = re.sub(r'(?<!\.)\.\.(?!\.)', '.', s)  # «et al..» -> «et al.»
+    s = re.sub(r', п\. [\d.]+(?= \()', '', s)  # пункт стосується однієї статті, не праці
     return s.rstrip('.'), url.strip()
 
 def main():

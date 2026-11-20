@@ -29,8 +29,24 @@ AUTHOR_SRC = {'NIST AI 100-2': 35, 'USAID Digital Strategy 2020–2024 (Digital 
 # Сліди виносок Вікіпедії у вихідному тексті (номери чужих приміток, що збивали б нумерацію джерел).
 WIKI_NOTES = [('мережі.[38]', 'мережі.'), ('час[261])', 'час)'), ('класифікатора.[47]', 'класифікатора.')]
 
-NOTE = ('Число у квадратних дужках після визначення, наприклад [36], — номер джерела в переліку '
-        '«Використані джерела», звідки взято або за яким укладено визначення.')
+NOTE = ('Число у квадратних дужках наприкінці статті, наприклад [36] (словник термінів у сфері '
+        'штучного інтелекту Міністерства цифрової трансформації України), — номер у переліку '
+        '«Використані джерела» праці, на основі якої підготовлено статтю. Статті без номера подано '
+        'за авторським текстом словника або з редакційними уточненнями.')
+
+# Технічні спотворення в описах джерел 1–35 (наслідок розпізнавання PDF): лише URL і літери.
+SRC_FIXES = [
+    ('cs-230/ cheatsheet-recurrent-neuralnetworks/', 'cs-230/cheatsheet-recurrent-neural-networks/'),
+    ('https://www. coe. int/en/web/artificial-intelligence/the', 'https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence'),
+    ('fortrustworthy', 'for trustworthy'), ('https://digitalstrategy.', 'https://digital-strategy.'),
+    ('https:// digital-strategy', 'https://digital-strategy'), ('assessment-listtrustworthy', 'assessment-list-trustworthy'),
+    ('lbdl.pdffAccessed 10 Jul. 2023]', 'lbdl.pdf'), ('13.oldsworth', '13.Holdsworth'),
+    ('ai_govemance', 'ai_governance'), ('https:// www.iso.org', 'https://www.iso.org'),
+    ('iso.Org/obp/ui/#iso:std:iso-iec:22989:dis:ed-l:vl:en', 'iso.org/obp/ui/#iso:std:iso-iec:22989:dis:ed-1:v1:en'),
+    ('J i, J.', 'Ji, J.'), ('doi:https:// doi.org/10.6028/nist.ai.600-l', 'doi:https://doi.org/10.6028/NIST.AI.600-1'),
+    ('legalinstmments', 'legalinstruments'), ('hbr.Org/2021/l 1/managing-ai-decision-makingtools', 'hbr.org/2021/11/managing-ai-decision-making-tools'),
+    ('unesdoc.unesco.Org', 'unesdoc.unesco.org'),
+]
 
 rd = lambda p: list(csv.DictReader(open(p, encoding='utf-8'), delimiter='\t'))
 norm = lambda t: re.sub(r'\s+', ' ', t.replace('\xa0', ' ')).strip().lower()
@@ -157,6 +173,11 @@ def main():
         for r in q.runs[1:]:
             r._element.getparent().remove(r._element)
     P = doc.paragraphs
+    sx = next(i for i, p in enumerate(P) if norm(p.text).startswith('використані джерела'))
+    for p in P[sx + 1:]:
+        for old, new in SRC_FIXES:
+            if replace_in_runs(p, old, new):
+                log.append(('виправлено', f'джерело: {old[:30]}', p.text[:30]))
     src_par = {}
     for p in P[sx + 1:]:
         m = re.match(r'\s*(\d+)\.', p.text)
@@ -277,6 +298,8 @@ def add_cite(p, n):
     tail = ''
     if txt.endswith('.') and not txt.endswith('...'):
         txt, tail = txt[:-1], '.'
+    elif txt and txt[-1] not in '.!?…:;':
+        tail = '.'  # уніфікація: «… текст [N].»
     t.text = txt
     t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
     rpr = last.find(W('rPr'))
