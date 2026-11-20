@@ -37,20 +37,6 @@ NOTE = ('Число у квадратних дужках наприкінці с
         'іншомовних) або статтю нормативного акта, наприклад [36, с. 4]. Статті без номера подано '
         'за авторським текстом словника або з редакційними уточненнями.')
 
-# Технічні спотворення в описах джерел 1–35 (наслідок розпізнавання PDF): лише URL і літери.
-SRC_FIXES = [
-    ('cs-230/ cheatsheet-recurrent-neuralnetworks/', 'cs-230/cheatsheet-recurrent-neural-networks/'),
-    ('https://www. coe. int/en/web/artificial-intelligence/the', 'https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence'),
-    ('fortrustworthy', 'for trustworthy'), ('https://digitalstrategy.', 'https://digital-strategy.'),
-    ('https:// digital-strategy', 'https://digital-strategy'), ('assessment-listtrustworthy', 'assessment-list-trustworthy'),
-    ('lbdl.pdffAccessed 10 Jul. 2023]', 'lbdl.pdf'), ('13.oldsworth', '13.Holdsworth'),
-    ('ai_govemance', 'ai_governance'), ('https:// www.iso.org', 'https://www.iso.org'),
-    ('iso.Org/obp/ui/#iso:std:iso-iec:22989:dis:ed-l:vl:en', 'iso.org/obp/ui/#iso:std:iso-iec:22989:dis:ed-1:v1:en'),
-    ('J i, J.', 'Ji, J.'), ('doi:https:// doi.org/10.6028/nist.ai.600-l', 'doi:https://doi.org/10.6028/NIST.AI.600-1'),
-    ('legalinstmments', 'legalinstruments'), ('hbr.Org/2021/l 1/managing-ai-decision-makingtools', 'hbr.org/2021/11/managing-ai-decision-making-tools'),
-    ('unesdoc.unesco.Org', 'unesdoc.unesco.org'),
-]
-
 rd = lambda p: list(csv.DictReader(open(p, encoding='utf-8'), delimiter='\t'))
 norm = lambda t: re.sub(r'\s+', ' ', t.replace('\xa0', ' ')).strip().lower()
 W = lambda tag: qn('w:' + tag)
@@ -123,6 +109,14 @@ def main():
             replace_in_runs(p, 'системи/', 'системи.')
             log.append(('виправлено', 'зайвий «/» у кінці', p.text[:40]))
 
+    # FIX 3b. У статтю «Фрейм» вклеєно дубль статті «Фронтирні моделі» (вона є окремо нижче).
+    for p in P[st:ab]:
+        t = p.text
+        k = t.find('інтелектуФронтирні моделі')
+        if norm(t).startswith('фрейм –') and k > 0:
+            replace_in_runs(p, t[k:], 'інтелекту.')
+            log.append(('виправлено', 'прибрано вклеєний дубль «Фронтирні моделі»', p.text[:40]))
+
     # FIX 4. Статті на латинську літеру (Anthropic, KV-кеш) стояли після «Я» — переносимо
     # у розділи А і К, як у покажчику Сергія (X-ризик автор уже тримає в Х).
     P = doc.paragraphs
@@ -166,21 +160,28 @@ def main():
     for s in rd('dani/dzherela-novi.tsv'):
         ne = copy.deepcopy(tmpl); anchor.addnext(ne); anchor = ne
         q = Paragraph(ne, doc)
-        q.runs[0].text = f"{s['номер']}.{s['текст']}"
+        q.runs[0].text = f"{s['номер']}. {s['текст']}"
         for r in q.runs[1:]:
             r._element.getparent().remove(r._element)
     P = doc.paragraphs
     sx = next(i for i, p in enumerate(P) if norm(p.text).startswith('використані джерела'))
+    # Джерела 1–35 (перелік автора) — в оформленні за ДСТУ 8302:2015 (dani/dzherela-dstu.tsv):
+    # той самий документ, виправлено лише спотворення URL і прізвищ.
+    dstu = {int(r['номер']): r['текст'] for r in rd('dani/dzherela-dstu.tsv')}
     for p in P[sx + 1:]:
-        for old, new in SRC_FIXES:
-            if replace_in_runs(p, old, new):
-                log.append(('виправлено', f'джерело: {old[:30]}', p.text[:30]))
+        m = re.match(r'\s*(\d+)\.', p.text)
+        if m and int(m.group(1)) in dstu:
+            p.runs[0].text = f"{m.group(1)}. {dstu[int(m.group(1))]}"
+            for r in p.runs[1:]:
+                r._element.getparent().remove(r._element)
+            for h in p._element.findall(W('hyperlink')):
+                p._element.remove(h)
     src_par = {}
     for p in P[sx + 1:]:
         m = re.match(r'\s*(\d+)\.', p.text)
         if m:
             src_par.setdefault(int(m.group(1)), p)
-    num = {r['текст'].split('. [online]')[0].rstrip('.'): int(r['номер']) for r in rd('dani/dzherela-novi.tsv')}
+    num = {r['ключ']: int(r['номер']) for r in rd('dani/dzherela-novi.tsv')}
     usaid = next((n for t, n in num.items() if t.startswith('USAID')), None)
 
     # Статті основної частини: заголовний абзац — той, що починається з терміна покажчика і тире.
@@ -233,6 +234,19 @@ def main():
         plan.append((k, term, i, no, r['джерело']))
 
     loc = {r['id_або_термін']: r['місце'] for r in rd('dani/storinky.tsv')}
+    # Джерела авторських визначень (dani/posylannia-avtor.tsv): пошук і незалежна перевірка 20.11.2026.
+    if os.path.exists('dani/posylannia-avtor.tsv'):
+        cited = {norm(x[1]) for x in plan if x[2] is not None}
+        for r in rd('dani/posylannia-avtor.tsv'):
+            term = r['термін']
+            if norm(term) in cited:
+                continue
+            t, _ = canon(r['джерело'], r['url'])
+            k = 'автор: ' + term
+            i = heads.get(norm(term)) or heads.get(cyr(norm(term)))
+            plan.append((k, term, i, num.get(t), r['джерело']))
+            if r['місце']:
+                loc[k] = r['місце']
     report = []
     for k, term, i, no, src in plan:
         if i is None or no is None or no not in src_par:
