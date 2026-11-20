@@ -52,8 +52,9 @@ def set_runs(p, uk, en, definition, template_runs):
     """Переписує абзац статті: жирний термін – жирний англійський відповідник – визначення."""
     base = template_runs[0] if template_runs else None
     base_rpr = copy.deepcopy(base._element.rPr) if base is not None and base._element.rPr is not None else None
-    for r in list(p.runs):
-        r._element.getparent().remove(r._element)
+    for ch in list(p._element):  # усі прогони, зокрема в гіперпосиланнях і смарт-тегах
+        if not ch.tag.endswith('}pPr'):
+            p._element.remove(ch)
     def add(text, bold):
         run = p.add_run(text)
         if base_rpr is not None:  # шрифт, розмір, мова — як у шаблонній статті

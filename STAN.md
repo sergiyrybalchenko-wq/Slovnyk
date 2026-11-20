@@ -1,6 +1,6 @@
 # Стан роботи
 
-Останнє оновлення: 2026-11-18.
+Останнє оновлення: 2026-11-20.
 
 | № | Етап | Стан |
 |---|------|------|
@@ -11,12 +11,18 @@
 | 4 | `dani/posylannia.tsv` (`scripts/posylannia.py`), нові джерела (`scripts/dzherela.py`) | готово, оновлювати після змін у `novi.tsv` |
 | 5 | Збірка, підрахунок сторінок, фінальні DOCX у файлах проєкту | у роботі |
 
+| 6 | Редакція Сергія (розриви сторінок перед літерами) як нова база; посилання [N] у тексті визначень | у роботі |
+
 ## Порядок збірки
 
+З 2026-11-20 база книжки — редакція Сергія `redaktsiia/slovnyk-redaktsiia-serhiia-2026-11-20.docx`
+(вручну не правиться). `zbirka.py` лишається для звіту змін.
+
 ```
-python3 scripts/dzherela.py     # нові джерела з novi.tsv → dani/dzherela-novi.tsv
-python3 scripts/posylannia.py   # службовий файл місць для посилань
-python3 scripts/zbirka.py       # build/slovnyk-nova-redaktsiia.docx і build/zminy.docx
+python3 scripts/dzherela.py            # нові джерела з novi.tsv → dani/dzherela-novi.tsv
+python3 scripts/posylannia.py          # службовий файл місць для посилань
+python3 scripts/zbirka.py              # build/zminy.docx (його DOCX книжки далі перезаписується)
+python3 scripts/posylannia_v_tekst.py  # build/slovnyk-nova-redaktsiia.docx: редакція Сергія + посилання [N]
 ```
 
 ## Відкриті дрібниці

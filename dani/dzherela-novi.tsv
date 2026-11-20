@@ -102,68 +102,66 @@
 136	National Institute of Standards and Technology (NIST). Computer Security Resource Center Glossary: cyber-physical systems (за NIST SP 800-160v1r1, SP 800-171r3), 2024. [online] Available at: https://csrc.nist.gov/glossary/term/cyber_physical_systems.
 137	NIST AI 100-1. Artificial Intelligence Risk Management Framework (AI RMF 1.0), NIST, 2023. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf.
 138	NIST AI 100-4. Reducing Risks Posed by Synthetic Content: An Overview of Technical Approaches to Digital Content Transparency, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-4.pdf.
-139	NIST AI 600-1. Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, NIST, 2024. [online] Available at: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf.
-140	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
-141	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
-142	NVIDIA. Metrics (NVIDIA NIM Benchmarking Documentation), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html.
-143	Open X-Embodiment Collaboration, O'Neill A., Rehman A., Gupta A. et al. Open X-Embodiment: Robotic Learning Datasets and RT-X Models, arXiv:2310.08864, 2023. [online] Available at: https://arxiv.org/abs/2310.08864.
-144	OpenCV team. Optical Flow (OpenCV 4.x documentation, tutorials), docs.opencv.org, 2026. [online] Available at: https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html.
-145	Papineni K., Roukos S., Ward T., Zhu W.-J. Bleu: a Method for Automatic Evaluation of Machine Translation, Proceedings of the 40th Annual Meeting of the ACL, 2002. [online] Available at: https://aclanthology.org/P02-1040/.
-146	Park, T. J., Kanda, N., Dimitriadis, D. et al.. A Review of Speaker Diarization: Recent Advances with Deep Learning, arXiv:2101.09624, 2021. [online] Available at: https://arxiv.org/abs/2101.09624.
-147	Peebles, W., Xie, S.. Scalable Diffusion Models with Transformers (ICCV 2023), arXiv:2212.09748, 2022. [online] Available at: https://arxiv.org/abs/2212.09748.
-148	PyTorch Foundation. torch.optim, PyTorch 2.2 documentation, 2024. [online] Available at: https://docs.pytorch.org/docs/2.2/optim.html.
-149	Radford, A., Kim, J. W., Hallacy, C. et al.. Learning Transferable Visual Models From Natural Language Supervision (ICML 2021), arXiv:2103.00020, 2021. [online] Available at: https://arxiv.org/abs/2103.00020.
-150	Rafailov R. et al. Direct Preference Optimization: Your Language Model is Secretly a Reward Model, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.18290.
-151	Rajasekaran P. et al. Effective context engineering for AI agents, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents.
-152	Rajbhandari, S., Rasley, J., Ruwase, O., He, Y.. ZeRO: Memory Optimizations Toward Training Trillion Parameter Models, arXiv:1910.02054, 2019. [online] Available at: https://arxiv.org/abs/1910.02054.
-153	Ramage D., Mazzocchi S. (Google Research). Federated Analytics: Collaborative Data Science without Data Collection, Google Research Blog, 2020. [online] Available at: https://www.research.google/blog/federated-analytics-collaborative-data-science-without-data-collection/.
-154	Ren, J., Rajbhandari, S., Aminabadi, R. Y. et al.. ZeRO-Offload: Democratizing Billion-Scale Model Training, arXiv:2101.06840, 2021. [online] Available at: https://arxiv.org/abs/2101.06840.
-155	Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.. High-Resolution Image Synthesis with Latent Diffusion Models (CVPR 2022), arXiv:2112.10752, 2021. [online] Available at: https://arxiv.org/abs/2112.10752.
-156	Ronneberger, O., Fischer, P., Brox, T.. U-Net: Convolutional Networks for Biomedical Image Segmentation (MICCAI 2015), arXiv:1505.04597, 2015. [online] Available at: https://arxiv.org/abs/1505.04597.
-157	Santoni de Sio F., van den Hoven J. Meaningful Human Control over Autonomous Systems: A Philosophical Account, Frontiers in Robotics and AI, 5, 2018. [online] Available at: https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full.
-158	Sato D. CanaryRelease, martinfowler.com (bliki), 2014. [online] Available at: https://martinfowler.com/bliki/CanaryRelease.html.
-159	Scaramuzza D., Fraundorfer F. Visual Odometry, Part I: The First 30 Years and Fundamentals, IEEE Robotics & Automation Magazine, 18(4), 2011. [online] Available at: https://rpg.ifi.uzh.ch/visual_odometry_tutorial.html.
-160	Schneider, J., Smalley, I. (IBM). What is a Neural Processing Unit (NPU)?, IBM Think, 2024. [online] Available at: https://www.ibm.com/topics/neural-processing-unit.
-161	scikit-learn developers (2026). scikit-learn documentation. [online] Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html.
-162	Sculley D., Holt G., Golovin D. et al. Hidden Technical Debt in Machine Learning Systems, Advances in Neural Information Processing Systems 28 (NIPS 2015), 2015. [online] Available at: https://papers.nips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html.
-163	Settles B. Active Learning Literature Survey, Computer Sciences Technical Report 1648, University of Wisconsin–Madison, 2009. [online] Available at: https://research.cs.wisc.edu/techreports/2009/TR1648.pdf.
-164	Sharma M. et al. Towards Understanding Sycophancy in Language Models, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2310.13548.
-165	Shazeer N. et al. Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer, arXiv, 2017. [online] Available at: https://arxiv.org/abs/1701.06538.
-166	Shen, J., Pang, R., Weiss, R. J. et al.. Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (ICASSP 2018), arXiv:1712.05884, 2017. [online] Available at: https://arxiv.org/abs/1712.05884.
-167	Shinn N. et al. Reflexion: Language Agents with Verbal Reinforcement Learning, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2303.11366.
-168	Snell C. et al. Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2408.03314.
-169	Society for Learning Analytics Research (SoLAR). SoLAR's Learning Analytics Definition Taskforce releases report, solaresearch.org, 2025. [online] Available at: https://www.solaresearch.org/?p=49779.
-170	Structured model outputs, OpenAI API documentation, OpenAI, 2026. [online] Available at: https://developers.openai.com/api/docs/guides/structured-outputs.
-171	Su J. et al. RoFormer: Enhanced Transformer with Rotary Position Embedding, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.09864.
-172	Sun S., Huang H., Li C. Advancements in humanoid robot dynamics and learning-based locomotion control methods, Intelligence & Robotics, 5(3), 2025. [online] Available at: https://www.oaepublish.com/articles/ir.2025.32.
-173	Sutskever I., Vinyals O., Le Q. V. Sequence to Sequence Learning with Neural Networks, NeurIPS 2014, arXiv:1409.3215, 2014. [online] Available at: https://arxiv.org/abs/1409.3215.
-174	Sutton R. T., Pincock D., Baumgart D. C., Sadowski D. C., Fedorak R. N., Kroeker K. I. An overview of clinical decision support systems: benefits, risks, and strategies for success, npj Digital Medicine, 3, 2020. [online] Available at: https://doaj.org/article/92e0917c061d4f84b6a7e7e739d84b14.
-175	Suvorov, R., Logacheva, E., Mashikhin, A. et al.. Resolution-robust Large Mask Inpainting with Fourier Convolutions, arXiv:2109.07161, 2021. [online] Available at: https://arxiv.org/abs/2109.07161.
-176	TensorFlow. TensorFlow Data Validation: Checking and analyzing your data, TFX Guide, 2026. [online] Available at: https://tensorflow.google.cn/tfx/guide/tfdv.
-177	The Framework Convention on Artificial Intelligence, Council of Europe, 2024. [online] Available at: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence.
-178	The General-Purpose AI Code of Practice, European Commission, 2025. [online] Available at: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai.
-179	Tobin J., Fong R., Ray A., Schneider J., Zaremba W., Abbeel P. Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World, arXiv:1703.06907, 2017. [online] Available at: https://arxiv.org/abs/1703.06907.
-180	van der Maaten L., Hinton G. Visualizing Data using t-SNE, Journal of Machine Learning Research, vol. 9, 2008. [online] Available at: https://jmlr.org/papers/v9/vandermaaten08a.html.
-181	Vaswani, A. et al. (2017). Attention Is All You Need. NeurIPS 2017. arXiv:1706.03762. [online] Available at: https://arxiv.org/abs/1706.03762.
-182	Vinyals, O., Toshev, A., Bengio, S., Erhan, D.. Show and Tell: A Neural Image Caption Generator (CVPR 2015), arXiv:1411.4555, 2014. [online] Available at: https://arxiv.org/abs/1411.4555.
-183	von Platen P. How to generate text: using different decoding methods for language generation with Transformers, Hugging Face, 2020. [online] Available at: https://huggingface.co/blog/how-to-generate.
-184	Wang J., Chen Y., Hao S., Peng X., Hu L. Deep Learning for Sensor-based Activity Recognition: A Survey, arXiv:1707.03502 (Pattern Recognition Letters), 2017. [online] Available at: https://arxiv.org/abs/1707.03502.
-185	Wang X. et al. Self-Consistency Improves Chain of Thought Reasoning in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2203.11171.
-186	Wang, S., Kanwar, P. (Google Cloud). BFloat16: The secret to high performance on Cloud TPUs, Google Cloud Blog, 2019. [online] Available at: https://cloud.google.com/blog/products/ai-machine-learning/bfloat16-the-secret-to-high-performance-on-cloud-tpus?hl=en.
-187	Wei C., Qin Z., Zhang Z., Wu G., Barth M. J. Integrating Multi-Modal Sensors: A Review of Fusion Techniques for Intelligent Vehicles, arXiv:2506.21885, 2025. [online] Available at: https://arxiv.org/abs/2506.21885v1.
-188	Welch G., Bishop G. An Introduction to the Kalman Filter, University of North Carolina at Chapel Hill, TR 95-041, 1995 (оновл. 2004). [online] Available at: https://techreports.cs.unc.edu/papers/95-041.pdf.
-189	Xu C., Guan S., Greene D., Kechadi M-T. Benchmark Data Contamination of Large Language Models: A Survey, arXiv:2406.04244, 2024. [online] Available at: https://arxiv.org/abs/2406.04244.
-190	Yao S. et al. ReAct: Synergizing Reasoning and Acting in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2210.03629.
-191	Yao S. et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models, NeurIPS 2023. [online] Available at: https://arxiv.org/abs/2305.10601.
-192	Zare M., Kebria P. M., Khosravi A., Nahavandi S. A Survey of Imitation Learning: Algorithms, Recent Developments, and Challenges, arXiv:2309.02473, 2023. [online] Available at: https://arxiv.org/abs/2309.02473.
-193	Zeghidour, N., Luebs, A., Omran, A., Skoglund, J., Tagliasacchi, M.. SoundStream: An End-to-End Neural Audio Codec, arXiv:2107.03312, 2021. [online] Available at: https://arxiv.org/abs/2107.03312.
-194	Zhang T., Kishore V., Wu F., Weinberger K. Q., Artzi Y. BERTScore: Evaluating Text Generation with BERT, arXiv:1904.09675, 2019. [online] Available at: https://arxiv.org/abs/1904.09675.
-195	Zhang Z. et al. A Survey on the Memory Mechanism of Large Language Model based Agents, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2404.13501.
-196	Zhao W., Peña Queralta J., Westerlund T. Sim-to-Real Transfer in Deep Reinforcement Learning for Robotics: a Survey, arXiv:2009.13303, 2020. [online] Available at: https://arxiv.org/abs/2009.13303.
-197	Zhao, Y., Gu, A., Varma, R. et al.. PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel, arXiv:2304.11277, 2023. [online] Available at: https://arxiv.org/abs/2304.11277.
-198	Zheng L., Chiang W.-L., Sheng Y. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS 2023 Datasets and Benchmarks Track, 2023. [online] Available at: https://arxiv.org/abs/2306.05685.
-199	Zheng L., Sheng Y., Chiang W.-L., Zhang H., Gonzalez J. E., Stoica I. Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings, LMSYS Blog, 2023. [online] Available at: https://lmsys.org/blog/2023-05-03-arena/.
-200	Zhong, Y., Liu, S., Chen, J. et al.. DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving, arXiv:2401.09670, 2024. [online] Available at: https://arxiv.org/abs/2401.09670.
-201	Zhu T., Ran Y., Zhou X., Wen Y. A Survey of Predictive Maintenance: Systems, Purposes and Approaches, arXiv:1912.07383, 2019. [online] Available at: https://arxiv.org/abs/1912.07383.
-202	Біла книга з регулювання ШІ в Україні: бачення Мінцифри. Версія для консультацій, Мінцифри, 2024. [online] Available at: https://storage.thedigital.gov.ua/files/d/9d/0bbc3a705c821a197bedfcdfe00899d9.pdf.
-203	Регламент (ЄС) 2022/2065 (Digital Services Act), ст. 3(t), Європейський парламент і Рада ЄС, 2022. [online] Available at: https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng.
+139	NIST CSRC Glossary: artificial intelligence red-teaming (за NIST SP 800-218A), NIST, 2024. [online] Available at: https://csrc.nist.gov/glossary/term/artificial_intelligence_red_teaming.
+140	Noyan, M., Beeching, E. (Hugging Face). Vision Language Models Explained, Hugging Face Blog, 2024. [online] Available at: https://huggingface.co/blog/vlms.
+141	NVIDIA. Metrics (NVIDIA NIM Benchmarking Documentation), docs.nvidia.com, 2026. [online] Available at: https://docs.nvidia.com/nim/benchmarking/llm/latest/metrics.html.
+142	Open X-Embodiment Collaboration, O'Neill A., Rehman A., Gupta A. et al. Open X-Embodiment: Robotic Learning Datasets and RT-X Models, arXiv:2310.08864, 2023. [online] Available at: https://arxiv.org/abs/2310.08864.
+143	OpenCV team. Optical Flow (OpenCV 4.x documentation, tutorials), docs.opencv.org, 2026. [online] Available at: https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html.
+144	Papineni K., Roukos S., Ward T., Zhu W.-J. Bleu: a Method for Automatic Evaluation of Machine Translation, Proceedings of the 40th Annual Meeting of the ACL, 2002. [online] Available at: https://aclanthology.org/P02-1040/.
+145	Park, T. J., Kanda, N., Dimitriadis, D. et al.. A Review of Speaker Diarization: Recent Advances with Deep Learning, arXiv:2101.09624, 2021. [online] Available at: https://arxiv.org/abs/2101.09624.
+146	Peebles, W., Xie, S.. Scalable Diffusion Models with Transformers (ICCV 2023), arXiv:2212.09748, 2022. [online] Available at: https://arxiv.org/abs/2212.09748.
+147	PyTorch Foundation. torch.optim, PyTorch 2.2 documentation, 2024. [online] Available at: https://docs.pytorch.org/docs/2.2/optim.html.
+148	Radford, A., Kim, J. W., Hallacy, C. et al.. Learning Transferable Visual Models From Natural Language Supervision (ICML 2021), arXiv:2103.00020, 2021. [online] Available at: https://arxiv.org/abs/2103.00020.
+149	Rafailov R. et al. Direct Preference Optimization: Your Language Model is Secretly a Reward Model, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2305.18290.
+150	Rajasekaran P. et al. Effective context engineering for AI agents, Anthropic, 2025. [online] Available at: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents.
+151	Rajbhandari, S., Rasley, J., Ruwase, O., He, Y.. ZeRO: Memory Optimizations Toward Training Trillion Parameter Models, arXiv:1910.02054, 2019. [online] Available at: https://arxiv.org/abs/1910.02054.
+152	Ramage D., Mazzocchi S. (Google Research). Federated Analytics: Collaborative Data Science without Data Collection, Google Research Blog, 2020. [online] Available at: https://www.research.google/blog/federated-analytics-collaborative-data-science-without-data-collection/.
+153	Ren, J., Rajbhandari, S., Aminabadi, R. Y. et al.. ZeRO-Offload: Democratizing Billion-Scale Model Training, arXiv:2101.06840, 2021. [online] Available at: https://arxiv.org/abs/2101.06840.
+154	Rombach, R., Blattmann, A., Lorenz, D., Esser, P., Ommer, B.. High-Resolution Image Synthesis with Latent Diffusion Models (CVPR 2022), arXiv:2112.10752, 2021. [online] Available at: https://arxiv.org/abs/2112.10752.
+155	Ronneberger, O., Fischer, P., Brox, T.. U-Net: Convolutional Networks for Biomedical Image Segmentation (MICCAI 2015), arXiv:1505.04597, 2015. [online] Available at: https://arxiv.org/abs/1505.04597.
+156	Santoni de Sio F., van den Hoven J. Meaningful Human Control over Autonomous Systems: A Philosophical Account, Frontiers in Robotics and AI, 5, 2018. [online] Available at: https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full.
+157	Sato D. CanaryRelease, martinfowler.com (bliki), 2014. [online] Available at: https://martinfowler.com/bliki/CanaryRelease.html.
+158	Scaramuzza D., Fraundorfer F. Visual Odometry, Part I: The First 30 Years and Fundamentals, IEEE Robotics & Automation Magazine, 18(4), 2011. [online] Available at: https://rpg.ifi.uzh.ch/visual_odometry_tutorial.html.
+159	Schneider, J., Smalley, I. (IBM). What is a Neural Processing Unit (NPU)?, IBM Think, 2024. [online] Available at: https://www.ibm.com/topics/neural-processing-unit.
+160	scikit-learn developers (2026). scikit-learn documentation. [online] Available at: https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html.
+161	Sculley D., Holt G., Golovin D. et al. Hidden Technical Debt in Machine Learning Systems, Advances in Neural Information Processing Systems 28 (NIPS 2015), 2015. [online] Available at: https://papers.nips.cc/paper_files/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html.
+162	Settles B. Active Learning Literature Survey, Computer Sciences Technical Report 1648, University of Wisconsin–Madison, 2009. [online] Available at: https://research.cs.wisc.edu/techreports/2009/TR1648.pdf.
+163	Sharma M. et al. Towards Understanding Sycophancy in Language Models, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2310.13548.
+164	Shazeer N. et al. Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer, arXiv, 2017. [online] Available at: https://arxiv.org/abs/1701.06538.
+165	Shen, J., Pang, R., Weiss, R. J. et al.. Natural TTS Synthesis by Conditioning WaveNet on Mel Spectrogram Predictions (ICASSP 2018), arXiv:1712.05884, 2017. [online] Available at: https://arxiv.org/abs/1712.05884.
+166	Shinn N. et al. Reflexion: Language Agents with Verbal Reinforcement Learning, arXiv, 2023. [online] Available at: https://arxiv.org/abs/2303.11366.
+167	Snell C. et al. Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2408.03314.
+168	Society for Learning Analytics Research (SoLAR). SoLAR's Learning Analytics Definition Taskforce releases report, solaresearch.org, 2025. [online] Available at: https://www.solaresearch.org/?p=49779.
+169	Structured model outputs, OpenAI API documentation, OpenAI, 2026. [online] Available at: https://developers.openai.com/api/docs/guides/structured-outputs.
+170	Su J. et al. RoFormer: Enhanced Transformer with Rotary Position Embedding, arXiv, 2021. [online] Available at: https://arxiv.org/abs/2104.09864.
+171	Sun S., Huang H., Li C. Advancements in humanoid robot dynamics and learning-based locomotion control methods, Intelligence & Robotics, 5(3), 2025. [online] Available at: https://www.oaepublish.com/articles/ir.2025.32.
+172	Sutskever I., Vinyals O., Le Q. V. Sequence to Sequence Learning with Neural Networks, NeurIPS 2014, arXiv:1409.3215, 2014. [online] Available at: https://arxiv.org/abs/1409.3215.
+173	Sutton R. T., Pincock D., Baumgart D. C., Sadowski D. C., Fedorak R. N., Kroeker K. I. An overview of clinical decision support systems: benefits, risks, and strategies for success, npj Digital Medicine, 3, 2020. [online] Available at: https://doaj.org/article/92e0917c061d4f84b6a7e7e739d84b14.
+174	Suvorov, R., Logacheva, E., Mashikhin, A. et al.. Resolution-robust Large Mask Inpainting with Fourier Convolutions, arXiv:2109.07161, 2021. [online] Available at: https://arxiv.org/abs/2109.07161.
+175	TensorFlow. TensorFlow Data Validation: Checking and analyzing your data, TFX Guide, 2026. [online] Available at: https://tensorflow.google.cn/tfx/guide/tfdv.
+176	Tobin J., Fong R., Ray A., Schneider J., Zaremba W., Abbeel P. Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World, arXiv:1703.06907, 2017. [online] Available at: https://arxiv.org/abs/1703.06907.
+177	USAID (2020). Digital Strategy 2020–2024: Digital Ecosystem Framework. [online] Available at: https://uatweb.usaid.gov/sites/default/files/2022-05/Digital_Strategy_Digital_Ecosystem_Final.pdf.
+178	van der Maaten L., Hinton G. Visualizing Data using t-SNE, Journal of Machine Learning Research, vol. 9, 2008. [online] Available at: https://jmlr.org/papers/v9/vandermaaten08a.html.
+179	Vaswani, A. et al. (2017). Attention Is All You Need. NeurIPS 2017. arXiv:1706.03762. [online] Available at: https://arxiv.org/abs/1706.03762.
+180	Vinyals, O., Toshev, A., Bengio, S., Erhan, D.. Show and Tell: A Neural Image Caption Generator (CVPR 2015), arXiv:1411.4555, 2014. [online] Available at: https://arxiv.org/abs/1411.4555.
+181	von Platen P. How to generate text: using different decoding methods for language generation with Transformers, Hugging Face, 2020. [online] Available at: https://huggingface.co/blog/how-to-generate.
+182	Wang J., Chen Y., Hao S., Peng X., Hu L. Deep Learning for Sensor-based Activity Recognition: A Survey, arXiv:1707.03502 (Pattern Recognition Letters), 2017. [online] Available at: https://arxiv.org/abs/1707.03502.
+183	Wang X. et al. Self-Consistency Improves Chain of Thought Reasoning in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2203.11171.
+184	Wang, S., Kanwar, P. (Google Cloud). BFloat16: The secret to high performance on Cloud TPUs, Google Cloud Blog, 2019. [online] Available at: https://cloud.google.com/blog/products/ai-machine-learning/bfloat16-the-secret-to-high-performance-on-cloud-tpus?hl=en.
+185	Wei C., Qin Z., Zhang Z., Wu G., Barth M. J. Integrating Multi-Modal Sensors: A Review of Fusion Techniques for Intelligent Vehicles, arXiv:2506.21885, 2025. [online] Available at: https://arxiv.org/abs/2506.21885v1.
+186	Welch G., Bishop G. An Introduction to the Kalman Filter, University of North Carolina at Chapel Hill, TR 95-041, 1995 (оновл. 2004). [online] Available at: https://techreports.cs.unc.edu/papers/95-041.pdf.
+187	Xu C., Guan S., Greene D., Kechadi M-T. Benchmark Data Contamination of Large Language Models: A Survey, arXiv:2406.04244, 2024. [online] Available at: https://arxiv.org/abs/2406.04244.
+188	Yao S. et al. ReAct: Synergizing Reasoning and Acting in Language Models, ICLR 2023. [online] Available at: https://arxiv.org/abs/2210.03629.
+189	Yao S. et al. Tree of Thoughts: Deliberate Problem Solving with Large Language Models, NeurIPS 2023. [online] Available at: https://arxiv.org/abs/2305.10601.
+190	Zare M., Kebria P. M., Khosravi A., Nahavandi S. A Survey of Imitation Learning: Algorithms, Recent Developments, and Challenges, arXiv:2309.02473, 2023. [online] Available at: https://arxiv.org/abs/2309.02473.
+191	Zeghidour, N., Luebs, A., Omran, A., Skoglund, J., Tagliasacchi, M.. SoundStream: An End-to-End Neural Audio Codec, arXiv:2107.03312, 2021. [online] Available at: https://arxiv.org/abs/2107.03312.
+192	Zhang T., Kishore V., Wu F., Weinberger K. Q., Artzi Y. BERTScore: Evaluating Text Generation with BERT, arXiv:1904.09675, 2019. [online] Available at: https://arxiv.org/abs/1904.09675.
+193	Zhang Z. et al. A Survey on the Memory Mechanism of Large Language Model based Agents, arXiv, 2024. [online] Available at: https://arxiv.org/abs/2404.13501.
+194	Zhao W., Peña Queralta J., Westerlund T. Sim-to-Real Transfer in Deep Reinforcement Learning for Robotics: a Survey, arXiv:2009.13303, 2020. [online] Available at: https://arxiv.org/abs/2009.13303.
+195	Zhao, Y., Gu, A., Varma, R. et al.. PyTorch FSDP: Experiences on Scaling Fully Sharded Data Parallel, arXiv:2304.11277, 2023. [online] Available at: https://arxiv.org/abs/2304.11277.
+196	Zheng L., Chiang W.-L., Sheng Y. et al. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena, NeurIPS 2023 Datasets and Benchmarks Track, 2023. [online] Available at: https://arxiv.org/abs/2306.05685.
+197	Zheng L., Sheng Y., Chiang W.-L., Zhang H., Gonzalez J. E., Stoica I. Chatbot Arena: Benchmarking LLMs in the Wild with Elo Ratings, LMSYS Blog, 2023. [online] Available at: https://lmsys.org/blog/2023-05-03-arena/.
+198	Zhong, Y., Liu, S., Chen, J. et al.. DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving, arXiv:2401.09670, 2024. [online] Available at: https://arxiv.org/abs/2401.09670.
+199	Zhu T., Ran Y., Zhou X., Wen Y. A Survey of Predictive Maintenance: Systems, Purposes and Approaches, arXiv:1912.07383, 2019. [online] Available at: https://arxiv.org/abs/1912.07383.
+200	Біла книга з регулювання ШІ в Україні: бачення Мінцифри. Версія для консультацій, Мінцифри, 2024. [online] Available at: https://storage.thedigital.gov.ua/files/d/9d/0bbc3a705c821a197bedfcdfe00899d9.pdf.
+201	Регламент (ЄС) 2022/2065 (Digital Services Act), ст. 3(t), Європейський парламент і Рада ЄС, 2022. [online] Available at: https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng.
