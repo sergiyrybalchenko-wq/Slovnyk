@@ -35,7 +35,8 @@ def canon(url):
     m = re.search(r'wikipedia\.org/(?:wiki/|w/index\.php\?title=)([^&#]+)', url)
     if m:
         title = urllib.parse.unquote(m.group(1)).replace('_', ' ')
-        return f'{title}. {WIKI}', url
+        wiki = 'Вікіпедія : вільна енциклопедія' if 'uk.wikipedia' in url else WIKI
+        return f'{title}. {wiki}', url
     raise ValueError(url)
 
 

@@ -28,14 +28,20 @@ OUT = 'build/slovnyk-nova-redaktsiia.docx'
 # Авторські джерела, що є в переліку: назва в posylannia.tsv -> номер у переліку.
 AUTHOR_SRC = {'NIST AI 100-2': 35, 'USAID Digital Strategy 2020–2024 (Digital Ecosystem Framework)': 'USAID'}
 # Сліди виносок Вікіпедії у вихідному тексті (номери чужих приміток, що збивали б нумерацію джерел).
-WIKI_NOTES = [('мережі.[38]', 'мережі.'), ('час[261])', 'час)'), ('класифікатора.[47]', 'класифікатора.')]
+WIKI_NOTES = [('швидкості»..', 'швидкості».'), ('мережі.[38]', 'мережі.'), ('час[261])', 'час)'), ('класифікатора.[47]', 'класифікатора.')]
 
 NOTE = ('Число у квадратних дужках наприкінці статті, наприклад [36] (словник термінів у сфері '
         'штучного інтелекту Міністерства цифрової трансформації України), — номер у переліку '
         '«Використані джерела» праці, на основі якої підготовлено статтю. Якщо місце в джерелі '
         'встановлено точно, після номера зазначено сторінку (с. — для українських видань, p. — для '
-        'іншомовних), розділ підручника або статтю нормативного акта, наприклад [36, с. 4]. Статті без номера подано '
+        'іншомовних), розділ (розд.) чи додаток (дод.) видання, статтю, частину й пункт нормативного акта (ст., ч., п.), наприклад [36, с. 4]. Статті без номера подано '
         'за авторським текстом словника або з редакційними уточненнями.')
+
+TAIL = [
+    'Coursera. Artificial Intelligence (AI) Terms: A to Z Glossary. Mountain View, CA, 2023.',
+    'Manning C. Artificial Intelligence Definitions. Stanford University Human-Centered Artificial Intelligence (HAI). Stanford, CA, 2020.',
+    # ІСО/МЕК 22989:2022 з хвоста автора не дублюємо: це той самий стандарт, що й у новому джерелі ISO/IEC 22989:2022.
+]
 
 rd = lambda p: list(csv.DictReader(open(p, encoding='utf-8'), delimiter='\t'))
 norm = lambda t: re.sub(r'\s+', ' ', t.replace('\xa0', ' ')).strip().lower()
@@ -117,6 +123,20 @@ def main():
             replace_in_runs(p, t[k:], 'інтелекту.')
             log.append(('виправлено', 'прибрано вклеєний дубль «Фронтирні моделі»', p.text[:40]))
 
+    # FIX 3c. Абзац, розірваний посеред речення («…скаляр,» / «вектор, …» у статті «Тензор»), — склеюємо.
+    for p in P[st:ab]:
+        a = p.text.rstrip()
+        nx = p._element.getnext()
+        if a.endswith(',') and nx is not None and nx.tag == W('p') and ptext(nx).lstrip()[:1].islower():
+            sp = OxmlElement('w:r'); tt = OxmlElement('w:t'); tt.text = ' '
+            tt.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve'); sp.append(tt)
+            p._element.append(sp)
+            for ch in list(nx):
+                if ch.tag != W('pPr'):
+                    p._element.append(ch)
+            nx.getparent().remove(nx)
+            log.append(('виправлено', 'склеєно розірваний абзац', p.text[:40]))
+
     # FIX 4. Статті на латинську літеру (Anthropic, KV-кеш) стояли після «Я» — переносимо
     # у розділи А і К, як у покажчику Сергія (X-ризик автор уже тримає в Х).
     P = doc.paragraphs
@@ -176,6 +196,21 @@ def main():
                 r._element.getparent().remove(r._element)
             for h in p._element.findall(W('hyperlink')):
                 p._element.remove(h)
+    # Хвіст переліку автора без номерів (Coursera, Manning, ISO/IEC 22989) — нумеруємо далі.
+    last = max((p for p in P[sx + 1:] if re.match(r'\s*\d+\.', p.text)), key=lambda p: int(re.match(r'\s*(\d+)', p.text).group(1)))
+    nlast = int(re.match(r'\s*(\d+)', last.text).group(1))
+    for p in P[sx + 1:]:
+        if p.text.strip() and not re.match(r'\s*\d+\.', p.text):
+            p._element.getparent().remove(p._element)
+    anchor = last._element
+    for k, t in enumerate(TAIL, nlast + 1):
+        ne = copy.deepcopy(last._element); anchor.addnext(ne); anchor = ne
+        q = Paragraph(ne, doc)
+        q.runs[0].text = f'{k}. {t}'
+        for r in q.runs[1:]:
+            r._element.getparent().remove(r._element)
+    log.append(('пронумеровано', f'хвіст переліку джерел: {nlast + 1}–{nlast + len(TAIL)}', ''))
+    P = doc.paragraphs
     src_par = {}
     for p in P[sx + 1:]:
         m = re.match(r'\s*(\d+)\.', p.text)
@@ -203,6 +238,8 @@ def main():
                 heads.setdefault(term, i)
                 break
     head_idx = set(heads.values())
+    head_par = [(term, P[i]) for term, i in heads.items()]
+    body_par = P[st + 1:ab]
 
     S = {r['id']: r for r in rd('dani/statti.tsv')}
     novi = {r['термін_uk'].strip(): r for r in rd('dani/novi.tsv')}
@@ -236,7 +273,7 @@ def main():
     loc = {r['id_або_термін']: r['місце'] for r in rd('dani/storinky.tsv')}
     # Джерела авторських визначень (dani/posylannia-avtor.tsv): пошук і незалежна перевірка 20.11.2026.
     if os.path.exists('dani/posylannia-avtor.tsv'):
-        cited = {norm(x[1]) for x in plan if x[2] is not None}
+        cited = {norm(x[1]) for x in plan if x[2] is not None and x[3] in src_par}
         for r in rd('dani/posylannia-avtor.tsv'):
             term = r['термін']
             if norm(term) in cited:
@@ -244,6 +281,8 @@ def main():
             t, _ = canon(r['джерело'], r['url'])
             k = 'автор: ' + term
             i = heads.get(norm(term)) or heads.get(cyr(norm(term)))
+            if i is None:  # термін у таблиці пошуку може бути обрізаний
+                i = next((v for h, v in heads.items() if h.startswith(norm(term))), None)
             plan.append((k, term, i, num.get(t), r['джерело']))
             if r['місце']:
                 loc[k] = r['місце']
@@ -281,6 +320,18 @@ def main():
         nh += 1
     log.append(('виправлено', f'прибрано гіперпосилань: {nh}', ''))
 
+    # Редакційний лад основної частини й переліку джерел.
+    P = doc.paragraphs
+    sx = next(i for i, p in enumerate(P) if norm(p.text).startswith('використані джерела'))
+    lad(head_par, None, body_par + P[sx + 1:], log)
+    # Назви розділів: «ПОКАЗЧИК» -> «ПОКАЖЧИК»; у змісті — назва розділу джерел, як у самому розділі.
+    for p in P[:sx + 1]:
+        if replace_in_runs(p, 'ПОКАЗЧИК', 'ПОКАЖЧИК'):
+            log.append(('виправлено', 'ПОКАЗЧИК -> ПОКАЖЧИК', p.text[:30]))
+        if re.search(r'ІНФОРМАЦІЙНІ\s+ДЖЕРЕЛА', p.text):
+            sub_runs(p, r'ІНФОРМАЦІЙНІ\s+ДЖЕРЕЛА', 'ВИКОРИСТАНІ ДЖЕРЕЛА')
+            log.append(('виправлено', 'зміст: назва розділу джерел', p.text[:30]))
+
     # Примітка про посилання — окремим абзацом у кінці передмови.
     P = doc.paragraphs
     pref = next(p for p in P if norm(p.text).startswith('з огляду на динамічний розвиток'))
@@ -300,6 +351,84 @@ def main():
             w.writerow(['', l[2], '', '', l[0] + ': ' + l[1], ''])
     done = sum(1 for r in report if r[4] == 'поставлено')
     print('посилань поставлено:', done, 'не поставлено:', len(report) - done, 'технічних виправлень:', len(log))
+
+
+def span_replace(p, k, end, new):
+    """Замінює символи [k, end) повного тексту абзацу, зберігаючи форматування інших фрагментів."""
+    ts = list(p._element.iter(W('t')))
+    pos, first = 0, True
+    for t in ts:
+        a, b = pos, pos + len(t.text or '')
+        pos = b
+        if b < k or a > end or (b == k and k != end) or (a == end and k != end):
+            continue
+        s, e = max(k, a) - a, min(end, b) - a
+        t.text = t.text[:s] + (new if first else '') + t.text[e:]
+        t.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
+        first = False
+        if k == end:
+            break
+
+
+def sub_runs(p, pattern, repl):
+    """re.sub по повному тексту абзацу; кожен збіг замінюється окремо (з кінця)."""
+    full = ptext(p._element)
+    ms = list(re.finditer(pattern, full))
+    for m in reversed(ms):
+        span_replace(p, m.start(), m.end(), m.expand(repl))
+    return len(ms)
+
+
+CYR = 'а-яіїєґА-ЯІЇЄҐ'
+
+
+def lad(head_par, body_par, all_par, log):
+    """Редакційний лад (CLAUDE.md, принцип 7): тире в рядку статті, пробіли, подвійні крапки, змішані алфавіти."""
+    n = {}
+    def cnt(key, k):
+        n[key] = n.get(key, 0) + k
+    # 1) Дрібниці в основній частині й переліку джерел.
+    fixes = [
+        (r'(?<=\S)  +(?=\S)', ' ', 'подвійні пробіли'),
+        (r'(?<![.…])\.\.$', '.', 'подвійна крапка'),
+        (r'(?<=\b\d)\.(?=[а-яіїєґ])', '. ', 'пробіл після номера'),
+        (fr',(?=[{CYR}])', ', ', 'пробіл після коми'),
+        (r'(?<=\w) ,', ',', 'пробіл перед комою'),
+        ('ШI', 'ШІ', 'латинська I у «ШІ»'),
+        ('Аdaptive', 'Adaptive', 'кирилиця в англ. терміні'), ('Іteration', 'Iteration', 'кирилиця в англ. терміні'),
+        ('Multimodal АІ', 'Multimodal AI', 'кирилиця в англ. терміні'), ('of АІ systems', 'of AI systems', 'кирилиця в англ. терміні'),
+        ('науковотехнічні', 'науково-технічні', 'дефіс'),
+        (r'інтервалі \[0, 1\]', 'інтервалі [0; 1]', 'інтервал [0; 1]'),
+        (r'тексту\s*-\s*-\s*спосіб', 'тексту – Sentiment analysis – спосіб', 'англійський термін «Аналіз тональності тексту» (з вилученого дубліката «Аналіз настроїв»)'),
+        (r'(?<=[A-Za-z)])\s*-\s*[-—]\s+', ' – ', 'подвійне тире'),
+        (r'\s+$', '', 'пробіл у кінці абзацу'), (r'^\s+(?=\S)', '', 'пробіл на початку абзацу'),
+    ]
+    for p in all_par:
+        for pat, rep, key in fixes:
+            cnt(key, sub_runs(p, pat, rep))
+    # 2) Розділювач «Термін – English – визначення».
+    for term, p in head_par:
+        t = ptext(p._element)
+        m1 = next((m for m in re.finditer(r'\s*[-–—]\s*', t) if norm(t[:m.start()]) == term), None)
+        if not m1:
+            continue
+        rest = t[m1.end():]
+        c = re.search(f'[{CYR}«]', rest)
+        if c and re.search('[A-Za-z]', rest[:c.start()]):
+            eng = rest[:c.start()]
+            seps = list(re.finditer(r'\s+[-–—]\s*|(?<=[\w).])[-–—]\s+', eng))
+            last = seps[-1] if seps else None
+            if last and not eng[last.end():].strip(' "(“0123456789.'):
+                if last.group() != ' – ':
+                    span_replace(p, m1.end() + last.start(), m1.end() + last.end(), ' – '); cnt('друге тире', 1)
+            elif not last and re.fullmatch(r"[A-Za-z][A-Za-z0-9 ()'’/.,+&-]*\s", eng) and not eng.rstrip().endswith(','):
+                span_replace(p, m1.end() + c.start(), m1.end() + c.start(), '– ')
+                cnt('додано друге тире', 1); log.append(('виправлено', 'додано тире між англійським терміном і визначенням', t[:50]))
+        if m1.group() != ' – ':
+            span_replace(p, m1.start(), m1.end(), ' – '); cnt('перше тире', 1)
+    for k, v in n.items():
+        if v:
+            log.append(('виправлено', f'{k}: {v}', ''))
 
 
 BM_ID = [1000]

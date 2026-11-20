@@ -9,6 +9,8 @@ MC = 'Словник термінів у сфері штучного інтел�
 CANON = [  # (шаблон, текст запису, URL)
     (r'^Н08|Мінцифри \(2026\)\. Словник', MC, 'https://storage.thedigital.gov.ua/files/2/d2/9a599f3249bc1b1fb0597df31b9a3d2d.pdf'),
     (r'2024/1689|Artificial Intelligence Act', 'Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act). Official Journal of the European Union. 2024. L 2024/1689', 'https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng'),
+    (r'CSRC Glossary|Computer Security Resource Center Glossary|Computer Security Resource Center\. National',
+     'Glossary. Computer Security Resource Center. National Institute of Standards and Technology', 'https://csrc.nist.gov/glossary'),
     (r'NIST AI 100-2e2025', None, ''),  # = Д35
     (r'NIST AI 600-1', None, ''),  # = Д24
     (r'Framework Convention on Artificial Intelligence', None, ''),  # = Д06
@@ -52,12 +54,25 @@ def canon(src, url):
         if re.search(pat, s):
             return (text, (u or url.strip())) if text else (None, None)
     s = re.sub(r'(?<!\.)\.\.(?!\.)', '.', s)  # «et al..» -> «et al.»
-    s = re.sub(r', п\. [\d.]+(?= \()', '', s)  # пункт стосується однієї статті, не праці
+    s = re.sub(r', п\. [\d.]+(?= \()', '', s)
+    s = re.sub(r', ст\. \d+\([a-z0-9]+\)', '', s)  # місце в акті — у посиланні, не в описі джерела  # пункт стосується однієї статті, не праці
     return s.rstrip('.'), url.strip()
 
 def dstu(s, u):
     """Опис за ДСТУ 8302:2015: «… URL: … (дата звернення: …).» або «… DOI: ….»"""
     s = s.rstrip('.').replace(' [online]', '')
+    s = re.sub(r"\b([A-Z][\w’'\-]+), ((?:[A-Z]\.(?:[ -]?[A-Z]\.)*))(?=[,. ])", r'\1 \2', s)  # «Hinton, G.» -> «Hinton G.»
+    s = re.sub(r'\s*\((?:картка|голова)[^)]*\)', '', s)
+    s = re.sub(r',?\s*дата публікації не вказана(?: \([^)]*\))?', '', s)
+    s = re.sub(r'\s*\((?:Hugging Face|Google Research|Google Cloud|IBM)\)', '', s)  # платформа вже є після назви
+    s = re.sub(r'(?<!\.)\.\.(?!\.)', '.', s)
+    s = re.sub(r'\b([A-Z])-([A-Z])\.', r'\1.-\2.', s)  # «M-T.» -> «M.-T.»
+    m = re.search(r'arxiv\.org/(?:abs|pdf)/(\d{4}\.\d{4,5})', u or '')
+    if m and 'arXiv:' not in s:
+        s = s.replace('arXiv,', f'arXiv:{m.group(1)},', 1) if 'arXiv,' in s else f'{s}. arXiv:{m.group(1)}'
+    # Області опису за ДСТУ 8302:2015 відокремлюємо крапкою: «…, arXiv:…, 2015» -> «…. arXiv:…. 2015».
+    s = re.sub(r',\s*(arXiv:[\d.]+(?:v\d)?)', r'. \1', s)
+    s = re.sub(r',\s*((?:19|20)\d{2})$', r'. \1', s)
     if not u:
         return s + '.'
     if 'doi.org/' in u:
