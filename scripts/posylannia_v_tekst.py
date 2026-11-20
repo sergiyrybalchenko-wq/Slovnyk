@@ -9,8 +9,8 @@
   build/posylannia-zvit.tsv — яке посилання біля якої статті стоїть (для перевірки)
 
 Посилання — номер джерела з переліку «Використані джерела» у квадратних дужках перед
-кінцевою крапкою визначення: «… текст [36].» Номер — внутрішнє посилання (у цифровій
-версії клацання веде до джерела в переліку). На одну статтю — одне посилання.
+кінцевою крапкою визначення: «… текст [36].» Звичайний текст, без гіперпосилань
+(Сергій прибрав гіперпосилання з книжки). На одну статтю — одне посилання.
 
 Додатково виправляє технічні дефекти бази (див. FIX_* нижче)."""
 import copy, csv, re, sys, os
@@ -108,12 +108,6 @@ def main():
                 log.append(('виправлено', 'приклеєний залишок перед терміном', p.text[:40]))
                 break
 
-    # FIX 2. «вибірка топ-п / топ-к» -> top-p / top-k (так у покажчику й англійському терміні).
-    for p in P[st:ab]:
-        if norm(p.text).startswith('ядерна вибірка'):
-            if replace_in_runs(p, 'топ-п', 'top-p') + replace_in_runs(p, 'топ-к', 'top-k'):
-                log.append(('виправлено', 'топ-п/топ-к -> top-p/top-k', p.text[:40]))
-
     # FIX 3. Сліди виносок Вікіпедії.
     for p in P[st:ix]:
         for old, new in WIKI_NOTES:
@@ -194,6 +188,8 @@ def main():
     sx = next(i for i, p in enumerate(P) if norm(p.text).startswith('використані джерела'))
     terms = {norm(p.text) for p in P[ix + 1:sx] if len(p.text.strip()) > 1}
     terms |= {norm(r['термін_uk']) for r in rd('dani/novi.tsv')}  # покажчик може ділити термін на два рядки
+    cyr = lambda t: t.replace('top-p', 'топ-п').replace('top-k', 'топ-к')
+    terms |= {cyr(t) for t in terms}
     terms = sorted(terms, key=len, reverse=True)
     heads = {}
     for i in range(st + 1, ab):
@@ -230,7 +226,7 @@ def main():
                 no = AUTHOR_SRC.get(src)
                 if no == 'USAID':
                     no = usaid
-        i = heads.get(norm(term))
+        i = heads.get(norm(term)) or heads.get(cyr(norm(term)))
         plan.append((k, term, i, no, r['джерело']))
 
     report = []
@@ -248,8 +244,24 @@ def main():
         add_cite(P[tgt], no)
         report.append([k, term, no, P[tgt].text[-60:], 'поставлено', src])
 
-    for n, p in src_par.items():
-        add_bookmark(p, n)
+    # Кирилиця в українських назвах вибірок, як у редакції Сергія: «вибірка топ-к», «вибірка топ-п».
+    for p in doc.paragraphs:
+        t = norm(p.text)
+        if t.startswith(('вибірка top-k', 'ядерна вибірка; вибірка top-p')):
+            n = replace_in_runs(p, 'Вибірка top-k', 'Вибірка топ-к') + replace_in_runs(p, 'вибірка top-p', 'вибірка топ-п')
+            if n:
+                log.append(('виправлено', 'top-k/top-p -> топ-к/топ-п в українському терміні', p.text[:40]))
+
+    # Гіперпосилання (успадковані з вихідного файлу) прибираємо, текст лишаємо.
+    nh = 0
+    for h in list(doc.element.body.iter(W('hyperlink'))):
+        for ch in list(h):
+            for rs in ch.iter(W('rStyle')):
+                rs.getparent().remove(rs)
+            h.addprevious(ch)
+        h.getparent().remove(h)
+        nh += 1
+    log.append(('виправлено', f'прибрано гіперпосилань: {nh}', ''))
 
     # Примітка про посилання — окремим абзацом у кінці передмови.
     P = doc.paragraphs
@@ -316,8 +328,7 @@ def add_cite(p, n):
         tt.set('{http://www.w3.org/XML/1998/namespace}space', 'preserve')
         r.append(tt)
         return r
-    h = OxmlElement('w:hyperlink'); h.set(W('anchor'), f'dzherelo_{n}'); h.set(W('history'), '1')
-    h.append(mk(f'[{n}]'))
+    h = mk(f'[{n}]')  # звичайний текст: Сергій прибрав із книжки всі гіперпосилання
     anchor = last if last.getparent().tag == W('p') else last.getparent()
     sp = mk(' ')
     anchor.addnext(sp)
