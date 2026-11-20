@@ -6,6 +6,7 @@
     Звірено з PDF за координатами номерів і вибірково очима (с. 22, 23, 29–32), 20.11.2026.
   • NIST (друковані номери сторінок; знайдено визначення в тексті PDF 20.11.2026) — таблиця NIST нижче.
   • Регламент (ЄС) 2024/1689 і 2022/2065 — стаття й пункт (для нормативних актів замість сторінки).
+  • Препринти arXiv — сторінка, де поняття визначено (dani/storinky-arxiv.tsv, 20.11.2026).
   • Підручники Goodfellow, Jurafsky & Martin, Manning et al. (вебверсії без пагінації) — розділ.
 Інші джерела (вебсторінки, глосарії, книжки у вебверсії, препринти) — без сторінок."""
 import csv, re
@@ -39,6 +40,7 @@ def art(src):
 
 T = {r['термін_uk'].strip().lower(): int(r['номер']) for r in csv.DictReader(open('dani/mintsyfra.tsv', encoding='utf-8'), delimiter='\t')}
 novi = {r['термін_uk'].strip(): r for r in csv.DictReader(open('dani/novi.tsv', encoding='utf-8'), delimiter='\t')}
+AX = {r['термін'].strip(): r['сторінка'].strip() for r in csv.DictReader(open('dani/storinky-arxiv.tsv', encoding='utf-8'), delimiter='\t')}
 out = []
 for r in csv.DictReader(open('dani/posylannia.tsv', encoding='utf-8'), delimiter='\t'):
     k, src = r['id_або_термін'], r['джерело']
@@ -55,6 +57,8 @@ for r in csv.DictReader(open('dani/posylannia.tsv', encoding='utf-8'), delimiter
             loc = NIST[t]
         elif '2024/1689' in src or '2022/2065' in src:
             loc = art(src)
+        elif t in AX and 'arxiv.org' in r['url']:  # препринти arXiv: сторінку знайдено в PDF (dani/storinky-arxiv.tsv)
+            loc = AX[t]
         elif re.match(r'(Goodfellow|Jurafsky|Manning C)', src):  # підручники у вебверсії: розділ замість сторінки
             m = re.search(r'розд\. ([\d.]+)|додаток ([A-Z])', src)
             if m:
